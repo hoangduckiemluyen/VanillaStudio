@@ -1,0 +1,20 @@
+@import url("./CSS/Decclarations.css");
+@import url("./CSS/Base.css");
+
+@import url("./CSS/Utilities/Avatar.css");
+@import url("./CSS/Utilities/Box.css");
+/* @import url("./CSS/Utilities/Button.css"); */
+@import url("./CSS/Utilities/Column.css");
+@import url("./CSS/Utilities/Form.css");
+@import url("./CSS/Utilities/Menu.css");
+@import url("./CSS/Utilities/Modal.css");
+@import url("./CSS/Utilities/Row.css");
+@import url("./CSS/Utilities/Scrollbar.css");
+@import url("./CSS/Utilities/Seperator.css");
+@import url("./CSS/Utilities/Text.css");
+@import url("./CSS/Utilities/Toast.css");
+@import url("./CSS/Utilities/Tree.css");
+@import url("./CSS/Utilities/Wrap.css");
+@import url("./CSS/Utilities/Select.css");
+
+@import url("./CSS/Responsive.css");

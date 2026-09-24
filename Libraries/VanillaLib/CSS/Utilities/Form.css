@@ -1,0 +1,242 @@
+/* text box & number */
+
+.vanilla .textbox {
+    
+    flex-direction: row;
+}
+
+.vanilla .textbox > .overlay {
+
+    position:           fixed;
+    top:                0;
+    left:               0;
+    right:              0;
+    bottom:             0;
+    display:            none;
+    z-index:            var(--vanilla_ZIndex-Hidden);
+    background-color:   var(--vanilla_Color-Overlay);
+}
+
+.vanilla .textbox > .input {
+
+    flex:               1;
+    flex-direction:     row;
+    cursor:             text;
+    border:             var(--vanilla_Border-Default);
+    border-color:       var(--vanilla_Color-Border);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+    padding:            var(--vanilla_Spacing-2) var(--vanilla_Spacing-4);
+    background-color:   var(--vanilla_Color-Background);
+}
+
+.vanilla .textbox > .input > .main { 
+
+    flex:               1; 
+    border-radius:      0;
+    cursor:             text;
+    overflow:           hidden;
+    white-space:        nowrap;
+}
+
+.vanilla .textbox > .data { display: none;}
+
+.vanilla .textbox > .input:hover                    { border-color: var(--vanilla_Color-Hover);}
+.vanilla .textbox > .input.actived                  { border-color: var(--vanilla_Color-Actived); z-index: var(--vanilla_ZIndex-Actived); }
+.vanilla .textbox:has(.input.actived) > .overlay    { display: flex; z-index: var(--vanilla_ZIndex-Overlay); }
+
+/* option class */
+.vanilla .textbox.fullwidth { flex: 1; }
+.vanilla .textbox.pill { border-radius: var(--vanilla_BorderRadius-Max); }
+
+
+
+/* checkbox & radio */
+
+.vanilla .checkbox, .vanilla .radio {
+    padding: 10px;
+    flex: 0 !important;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid white;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.vanilla .radio {
+    border-radius: 50px;
+}
+
+.vanilla .checkbox::before, .vanilla .radio::before {
+    content: "";
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    color: white;
+    background-color: white;
+    border-radius: inherit;
+}
+
+.vanilla .checkbox::before {
+    border-radius: 2px;
+}
+
+.vanilla .checkbox > input, .vanilla .radio > input {
+    display: none;
+}
+
+.vanilla .checkbox:has(input:checked)::before,
+.vanilla .radio:has(input:checked)::before {
+    display: flex;
+}
+
+/* color picker */
+
+.vanilla .colorpicker {
+    display: flex;
+    width: 50px;
+    height: 36px;
+    background-color: red;
+    border: 1px solid white;
+    border-radius: 8px;
+    position: relative;
+}
+
+.vanilla .colorpicker > input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+/* date & datetime local*/
+
+.vanilla input[type="date"], input[type="datetime-local"] {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    background-color: var(--vanilla_Color-Background);
+    position: relative;
+}
+
+.vanilla input[type="date"]::-webkit-calendar-picker-indicator,
+.vanilla input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(0.8) hue-rotate(180deg); 
+}
+
+/* file */
+.vanilla .file {
+    min-width: 100px;
+    display: flex;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    position: relative;
+    padding: 10px 20px;
+    user-select: none;
+}
+
+.vanilla .file::before {
+    content: "♠";
+    padding-right: 20px;
+}
+
+.vanilla .file > input {
+    display: none;
+}
+
+/* link */
+.vanilla .link {
+
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+    color: var(--vanilla_PrimaryTextColor);
+}
+
+/* switch */
+.vanilla .toggle-switch {
+    width: 60px;
+    height: 32px;
+    border: 1px solid white;
+    border-radius: 50px;
+    position: relative;
+}
+
+.vanilla .toggle-switch::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: white;
+    border-radius: 100px;
+}
+
+.vanilla .toggle-switch:has(input:checked)::before {
+    left: calc(100% - 20px - 5px);
+}
+
+.vanilla .toggle-switch > input {
+    display: none;
+}
+
+/* --- Button ----------------------------------------------------------------------------------- */
+/* --- Button - Base -------------------------------------------------------- */
+.vanilla .button {
+
+    padding:            var(--vanilla_ButtonPadding);
+    display:            flex;
+    align-items:        center;
+    justify-content:    center;
+    text-decoration:    none;
+    cursor:             pointer;
+    overflow:           hidden;
+    border-color:       transparent;
+    position:           relative;
+    outline:            none;
+    user-select:        none;
+    text-shadow:        var(--vanilla_ButtonText-Shadow);
+    /* box-shadow:         var(--vanilla_ButtonBox-Shadow); */
+    border-style:       var(--vanilla_ButtonBorderStyle);
+    border-width:       var(--vanilla_ButtonBorderSize);
+    border-radius:      var(--vanilla_ButtonBorderRadius);
+
+    color:              var(--vanilla_ButtonText);
+    border-color:       var(--vanilla_ButtonBorderColor);
+    background-color:   var(--vanilla_ButtonBackground);
+
+    transition:         var(--vanilla_ButtonTransition);
+    -o-transition:      var(--vanilla_ButtonTransition);
+    -moz-transition:    var(--vanilla_ButtonTransition);
+    -webkit-transition: var(--vanilla_ButtonTransition);
+}
+
+.vanilla .button > * { 
+
+    color:              var(--vanilla_ButtonText);
+    text-decoration:    none; 
+}
+
+.vanilla .button.square {
+    width:          var( --vanilla_ButtonSquare-Width) !important;
+    padding: 0;
+}
+
+.vanilla .button.square::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}

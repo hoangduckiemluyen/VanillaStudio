@@ -1,0 +1,71 @@
+.vanilla .select { position: relative; }
+
+.vanilla .select > .overlay {
+    
+    position:           fixed;
+    top:                0;
+    left:               0;
+    right:              0;
+    bottom:             0;
+    display:            none;
+    z-index:            var(--vanilla_ZIndex-Hidden);
+    background-color:   var(--vanilla_Color-Overlay);
+}
+
+.vanilla .select > .field { 
+    background-color:   var(--vanilla_Color-Background); 
+    z-index:            var(--vanilla_ZIndex-Default);
+}
+
+.vanilla .select > .data {
+    display: none;
+}
+
+.vanilla .select > .dropdown {
+
+    top:                calc(100% + var(--vanilla_Spacing-4));
+    left:               0;
+    right:              0;
+    max-height:         var(--vanilla_Dropdown-MaxHeight);
+    position:           absolute;
+    display:            none;
+    
+    z-index:            var(--vanilla_ZIndex-Hidden);
+    padding:            var(--vanilla_Spacing-4);
+    border:             var(--vanilla_Border-Default);
+    border-color:       var(--vanilla_Color-Actived);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+    background-color:   var(--vanilla_Color-Background);
+}
+
+.vanilla .select > .dropdown > .list {
+
+    overflow-y:         scroll;
+}
+
+.vanilla .select > .dropdown > .list > .item { flex-shrink: 0;}
+
+.vanilla .select .field {
+
+    align-items:        flex-start;
+    cursor:             pointer;
+    padding:            var(--vanilla_Spacing-2) var(--vanilla_Spacing-4);
+    border:             var(--vanilla_Border-Default);
+    flex-shrink:        0;
+}
+
+.vanilla .select > .field {
+    border:             var(--vanilla_Border-Default);
+    border-color:       var(--vanilla_Color-Border);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+}
+
+
+/* option classes */
+
+.vanilla .select > .dropdown.actived                    { display: flex; }
+.vanilla .select .field:hover                           { border-bottom-color: var(--vanilla_Color-Hover); }
+.vanilla .select > .field:hover                         { border-color: var(--vanilla_Color-Hover); }
+.vanilla .select > .field.actived                       { border-color: var(--vanilla_Color-Actived); z-index: var(--vanilla_ZIndex-Actived); }
+.vanilla .select > .field.actived ~ .dropdown           { display: flex; z-index: var(--vanilla_ZIndex-Actived); }
+.vanilla .select:has(> .field.actived) > .overlay       { display: flex; z-index: var(--vanilla_ZIndex-Overlay);}

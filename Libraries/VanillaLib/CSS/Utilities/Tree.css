@@ -1,0 +1,27 @@
+.vanilla .tree .list .list { display: none; }
+
+.vanilla .tree > .list > .item .item { padding-left: 20px; }
+
+/* field */
+.vanilla .tree > .list > .item .field {
+
+    flex-direction:     row;
+    cursor:             pointer;
+    text-decoration:    none;
+    color:              var(--vanilla_Color-Text);
+    border:             var(--vanilla_Border-Default);
+    padding:            var(--vanilla_Spacing-2) var(--vanilla_Spacing-4);
+}
+
+
+.vanilla .tree.scroll           { overflow-y: scroll; }
+.vanilla .tree.scroll .item     { flex-shrink: 0; }
+.vanilla .tree.scroll .field    { flex-shrink: 0; }
+
+.vanilla .tree .field.file                      { border-radius:        var(--vanilla_BorderRadius-Default); }
+.vanilla .tree .field.file:hover                { border-color:         var(--vanilla_Color-Hover); }
+.vanilla .tree .field.file.actived              { border-color:         var(--vanilla_Color-Actived); }
+.vanilla .tree .field.folder                    { border-radius:        0; }
+.vanilla .tree .field.folder:hover              { border-bottom-color:  var(--vanilla_Color-Hover); }
+.vanilla .tree .field.folder.actived            { border-bottom-color:  var(--vanilla_Color-Actived); }
+.vanilla .tree .field.folder.actived ~ .list    { display: flex; }

@@ -1,0 +1,65 @@
+/* --- Responsive --------------------------------------------------------------------------------*/
+
+/* --- Moblie resolution ---------------------------------------------------- */
+@media (max-width: 719px){
+    
+    .vanilla { --vanilla_GutterSize: 1rem; }
+    .vanilla .wide {
+        padding: 0 var(--vanilla_GutterSize);
+        width: 100%;
+    }
+
+    .s0     { display: none; }
+    .s1     { width: var(--vanilla_ColSize_1);  }    
+    .s2     { width: var(--vanilla_ColSize_2);  }    
+    .s3     { width: var(--vanilla_ColSize_3);  }    
+    .s4     { width: var(--vanilla_ColSize_4);  }    
+    .s5     { width: var(--vanilla_ColSize_5);  }    
+    .s6     { width: var(--vanilla_ColSize_6);  }    
+    .s7     { width: var(--vanilla_ColSize_7);  }    
+    .s8     { width: var(--vanilla_ColSize_8);  }    
+    .s9     { width: var(--vanilla_ColSize_9);  }    
+    .s10    { width: var(--vanilla_ColSize_10); }
+    .s11    { width: var(--vanilla_ColSize_11); }
+    .s12    { width: var(--vanilla_ColSize_12); }
+}
+
+/* --- Tablet resolution ---------------------------------------------------- */
+@media (min-width: 720px) and (max-width: 1023px){
+
+    .vanilla { --vanilla_GutterSize: 1.6rem; }
+    .vanilla .wide { width: 80rem; }
+    
+    .m0     { display: none; }
+    .m1     { width: var(--vanilla_ColSize_1);  }    
+    .m2     { width: var(--vanilla_ColSize_2);  }    
+    .m3     { width: var(--vanilla_ColSize_3);  }    
+    .m4     { width: var(--vanilla_ColSize_4);  }    
+    .m5     { width: var(--vanilla_ColSize_5);  }    
+    .m6     { width: var(--vanilla_ColSize_6);  }    
+    .m7     { width: var(--vanilla_ColSize_7);  }    
+    .m8     { width: var(--vanilla_ColSize_8);  }    
+    .m9     { width: var(--vanilla_ColSize_9);  }    
+    .m10    { width: var(--vanilla_ColSize_10); }
+    .m11    { width: var(--vanilla_ColSize_11); }
+    .m12    { width: var(--vanilla_ColSize_12); }
+}
+
+/* --- PC resolution -------------------------------------------------------- */
+@media (min-width: 1024px) {
+
+    .vanilla .wide { width: 120rem; }
+    .l0     { display: none; }
+    .l1     { width: var(--vanilla_ColSize_1);  }    
+    .l2     { width: var(--vanilla_ColSize_2);  }    
+    .l3     { width: var(--vanilla_ColSize_3);  }    
+    .l4     { width: var(--vanilla_ColSize_4);  }    
+    .l5     { width: var(--vanilla_ColSize_5);  }    
+    .l6     { width: var(--vanilla_ColSize_6);  }    
+    .l7     { width: var(--vanilla_ColSize_7);  }    
+    .l8     { width: var(--vanilla_ColSize_8);  }    
+    .l9     { width: var(--vanilla_ColSize_9);  }    
+    .l10    { width: var(--vanilla_ColSize_10); }
+    .l11    { width: var(--vanilla_ColSize_11); }
+    .l12    { width: var(--vanilla_ColSize_12); }
+}

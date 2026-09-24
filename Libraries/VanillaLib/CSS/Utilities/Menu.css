@@ -1,0 +1,77 @@
+.vanilla .menu {
+    padding:            2px; /* de hien ro phan hover & actived */
+    z-index:            10;
+}
+
+.vanilla .menu > .overlay {
+
+    position:           fixed;
+    top:                0;
+    left:               0;
+    right:              0;
+    bottom:             0;
+    display:            none;
+    z-index:            var(--vanilla_ZIndex-Hidden);
+    background-color:   var(--vanilla_Color-Overlay);
+}
+
+.vanilla .menu .list { z-index: var(--vanilla_ZIndex-Default); }
+
+.vanilla .menu .list > .item { 
+
+    position:           relative; 
+    flex-direction:     row; 
+}
+
+.vanilla .menu .list > .item > .field {
+
+    flex:               1;
+    flex-direction:     row;
+    align-items:        center;
+    justify-content:    center;
+    white-space:        nowrap;
+    text-decoration:    none;
+    cursor:             pointer;
+    z-index:            var(--vanilla_ZIndex-Default);
+    border:             var(--vanilla_Border-Default);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+    padding:            var(--vanilla_Spacing-2) var(--vanilla_Spacing-4);
+}
+
+.vanilla .menu .list > .item > .switch > .status { display: none; }
+
+.vanilla .menu .list[data-depth = "0"] { flex-direction: row; }
+
+.vanilla .menu .list[data-depth = "1"] {
+
+    position:           absolute;
+    top:                100%;
+    left:               0;
+    z-index:            10;
+    display:            none;
+    width:              fit-content;
+    height:             fit-content;
+    padding:            var(--vanilla_Spacing-4);
+    border:             var(--vanilla_Border-Default);
+    border-color:       var(--vanilla_Color-Actived);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+    background-color:   var(--vanilla_Color-Background);
+}
+
+.vanilla .menu .list[data-depth = "1"] > .item > .field {
+
+    border:             0;
+    border-radius:      0;
+    justify-content:    flex-start;
+    border-bottom:      var(--vanilla_Border-Default);
+}
+
+/* toggle */
+.vanilla .menu:has(.list[data-depth = "0"] > .item > .field.actived) > .overlay     { display: flex; z-index: var(--vanilla_ZIndex-Overlay); }
+.vanilla .menu .list > .item > .field:hover                                         { border-color: var(--vanilla_Color-Hover); }
+.vanilla .menu .list:has(> .item > .field.actived)                                  { z-index: var(--vanilla_ZIndex-Actived); }
+.vanilla .menu .list > .item > .field.actived                                       { border-color: var(--vanilla_Color-Actived); z-index: var(--vanilla_ZIndex-Actived); }
+.vanilla .menu .list > .item > .field.actived ~ .list                               { display: flex; z-index: var(--vanilla_ZIndex-Actived); }
+
+
+

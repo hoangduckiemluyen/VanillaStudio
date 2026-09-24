@@ -1,0 +1,101 @@
+/* --- General Constant --------------------------------------------------------------------------------------------- */
+/* --- Reset CSS constant ----------------------------------------------------------------------- */
+:root{
+    --vanilla_HTMLFontSize:     20px;
+}
+
+/* --- Vanilla constant ------------------------------------------------------------------------- */
+.vanilla {
+
+    /* --- Color constant --------------------------------------------------- */
+    --vanilla_Color-Primary:                rgb(0, 0, 75);
+    --vanilla_Color-Secondary:              rgb(124, 0, 212);
+    --vanilla_Color-Light:                  rgb(234, 234, 234);
+    --vanilla_Color-Dark:                   rgb(44, 44, 44);
+    --vanilla_Color-Completed:              rgb(0, 206, 34);
+    --vanilla_Color-Info:                   #3898ff;
+    --vanilla_Color-Alert:                  rgb(255, 153, 0);
+    --vanilla_Color-Danger:                 rgb(236, 35, 0);
+    --vanilla_Color-Disabled:               rgb(127, 127, 127);
+    --vanilla_Color-Actived:                red;
+    --vanilla_Color-Hover:                  rgb(153, 153, 153);
+    /* --vanilla_Color-Hover:                  #a6d1ff; */
+    --vanilla_Color-Overlay:                rgba(0, 0, 0, 0.4);
+
+    --vanilla_Color-Background:             rgb(234, 234, 234);
+    --vanilla_Color-Border:                 grey;
+    --vanilla_Color-Text:                   rgb(44, 44, 44);
+
+    --vanilla_ThemeDarkColor-Background:    rgb(44, 44, 44);
+    --vanilla_ThemeDarkColor-Border:        grey;
+    --vanilla_ThemeDarkColor-Text:          rgb(194, 194, 194);
+
+    --vanilla_ThemeLightColor-Background:   rgb(234, 234, 234);
+    --vanilla_ThemeLightColor-Border:       grey;
+    --vanilla_ThemeLightColor-Text:         rgb(44, 44, 44);
+
+    /* --- Text constant ---------------------------------------------------- */
+    --vanilla_FontFamily:                   "Roboto", sans-serif;
+
+    /* --- Text font size ------------------------------------------*/
+    --vanilla_FontSize-Default:             14px;
+    --vanilla_FontSize-1:                   16px;
+    --vanilla_FontSize-2:                   20px;
+    --vanilla_FontSize-3:                   24px;
+    --vanilla_FontSize-4:                   28px;
+    --vanilla_FontSize-5:                   32px;
+    --vanilla_FontSize-6:                   36px;
+
+    /* --- Text font weight ----------------------------------------*/
+    --vanilla_FontWeight-Default:           300;
+    --vanilla_FontWeight-1:                 400;
+    --vanilla_FontWeight-2:                 500;
+    --vanilla_FontWeight-3:                 600;
+    --vanilla_FontWeight-4:                 700;
+    --vanilla_FontWeight-5:                 800;
+    --vanilla_FontWeight-6:                 900;
+    
+
+    /* --- Other constant --------------------------------------------------- */
+    --vanilla_Dropdown-MaxHeight:           500%;
+    --vanilla_BoxShadow-Default:            0 0 5px var(--vanilla_Color-Background);
+    --vanilla_TextShadow-Default:           0 0 5px var(--vanilla_Color-Background);
+    --vanilla_Border-Default:               1px solid transparent;
+    --vanilla_BorderRadius-Default:         8px;
+    --vanilla_BorderRadius-Max:             100px;
+    --vanilla_Scrollbar-Width:              3px;
+    --vanilla_ZIndex-Defaut:                0;
+    --vanilla_ZIndex-Hidden:                -1;
+    --vanilla_ZIndex-Overlay:               10;
+    --vanilla_ZIndex-Actived:               20;
+
+    --vanilla_ToastProgress-Height:         2px;
+    --vanilla_ToastStatus-Width:            40px;
+}
+
+/* --- Grid Constant ---------------------------------------------------------------------------- */
+.vanilla {
+
+    --vanilla_Spacing-1:            2px;
+    --vanilla_Spacing-2:            4px;
+    --vanilla_Spacing-3:            6px;
+    --vanilla_Spacing-4:            8px;
+    --vanilla_Spacing-5:            10px;
+    --vanilla_Spacing-6:            12px;
+    --vanilla_GutterSize:           8px;
+    --vanilla_ColPadding:           calc(var(--vanilla_GutterSize) / 2);
+    --vanilla_RowNegativeMargin:    calc(var(--vanilla_GutterSize) / -2);
+
+    --vanilla_ColSize_1:    8.333334%;
+    --vanilla_ColSize_2:    16.666667%;
+    --vanilla_ColSize_3:    25%;
+    --vanilla_ColSize_4:    33.333334%;
+    --vanilla_ColSize_5:    41.666667%;
+    --vanilla_ColSize_6:    50%;
+    --vanilla_ColSize_7:    58.333334%;
+    --vanilla_ColSize_8:    66.666667%;
+    --vanilla_ColSize_9:    75%;
+    --vanilla_ColSize_10:   83.333334%;
+    --vanilla_ColSize_11:   91.666667%;
+    --vanilla_ColSize_12:   100%;
+}

@@ -1,0 +1,48 @@
+/* --- General -------------------------------------------------------------- */
+.vanilla .box { display: flex; }
+
+.vanilla .horizontal-items                  { flex-direction: row; }
+.vanilla .vertical-items                    { flex-direction: column; }
+
+.vanilla .horizontal-items.x-start          { justify-content: start;}
+.vanilla .horizontal-items.x-center         { justify-content: center;}
+.vanilla .horizontal-items.x-end            { justify-content: end;}
+.vanilla .horizontal-items.x-stretch > *    { flex: 1;} /* loi bi keo dai content*/
+.vanilla .horizontal-items.y-start          { align-items: start;}
+.vanilla .horizontal-items.y-center         { align-items: center;}
+.vanilla .horizontal-items.y-end            { align-items: end;}
+.vanilla .horizontal-items.y-stretch        { align-items: stretch;}
+
+.vanilla .vertical-items.x-start            { align-items: start;}
+.vanilla .vertical-items.x-center           { align-items: center;}
+.vanilla .vertical-items.x-end              { align-items: end;}
+.vanilla .vertical-items.x-stretch          { align-items: stretch;}
+.vanilla .vertical-items.y-start            { justify-content: start;}
+.vanilla .vertical-items.y-center           { justify-content: center;}
+.vanilla .vertical-items.y-end              { justify-content: end;}
+.vanilla .vertical-items.y-stretch > *      { width: 100%;}
+
+/* --- Inner Items ---------------------------------------------------------- */
+.vanilla .horizontal-items > .full-width        { flex: 1; }
+.vanilla .horizontal-items > .full-height        { align-self: stretch; }
+.vanilla .vertical-items > .full-width        { align-self: stretch; }
+.vanilla .vertical-items > .full-height        { flex: 1; }
+
+/* --- Grid ----------------------------------------------------------------- */
+.vanilla .wide {
+    width:      120rem;
+    max-width:  100%;
+    margin:     0 auto;
+}
+
+/* --- Other ----------------------------------------------------------------- */
+.vanilla .overflow-hidden { overflow: hidden; }
+
+.vanilla .border { 
+
+    border:         1px solid var(--vanilla_Color-Border);
+    border-radius:  var(--vanilla_BorderRadius);
+}
+
+.gutter { padding: calc(var(--vanilla_GutterSize) / 2); }
+.half-gutter { padding: calc(var(--vanilla_GutterSize) / 2 / 2); }

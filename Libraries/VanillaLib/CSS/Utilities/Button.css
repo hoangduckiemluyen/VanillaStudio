@@ -1,0 +1,61 @@
+
+/* --- Button - Color ------------------------------------------------------- */
+.vanilla .button.primary {
+
+    --vanilla_ButtonText:           var(--vanilla_ButtonText-Primary);
+    --vanilla_ButtonBorderColor:    var(--vanilla_ButtonBorderColor-Primary);
+    --vanilla_ButtonBackground:     var(--vanilla_ButtonBackground-Primary);
+}
+
+.vanilla .button.secondary {
+
+    --vanilla_ButtonText:           var(--vanilla_ButtonText-Secondary);
+    --vanilla_ButtonBorderColor:    var(--vanilla_ButtonBorderColor-Secondary);
+    --vanilla_ButtonBackground:     var(--vanilla_ButtonBackground-Secondary);
+}
+
+.vanilla .button.normal {
+
+    text-shadow:                    none;
+    --vanilla_ButtonText:           var(--vanilla_ButtonText-Normal);
+    --vanilla_ButtonBorderColor:    var(--vanilla_ButtonBorderColor-Normal);
+    --vanilla_ButtonBackground:     var(--vanilla_ButtonBackground-Normal);
+}
+
+.vanilla .button.alert {
+
+    --vanilla_ButtonText:           var(--vanilla_ButtonText-Alert);
+    --vanilla_ButtonBorderColor:    var(--vanilla_ButtonBorderColor-Alert);
+    --vanilla_ButtonBackground:     var(--vanilla_ButtonBackground-Alert);
+}
+
+.vanilla .button.danger {
+
+    --vanilla_ButtonText:           var(--vanilla_ButtonText-Danger);
+    --vanilla_ButtonBorderColor:    var(--vanilla_ButtonBorderColor-Danger);
+    --vanilla_ButtonBackground:     var(--vanilla_ButtonBackground-Danger);
+}
+
+.vanilla .button.disabled {
+
+    cursor:                         default;
+    text-shadow:                    none;
+    font-style:                     italic;
+    --vanilla_ButtonText:           var(--vanilla_ButtonText-Disabled);
+    --vanilla_ButtonBorderColor:    var(--vanilla_ButtonBorderColor-Disabled);
+    --vanilla_ButtonBackground:     var(--vanilla_ButtonBackground-Disabled);
+}
+
+.vanilla .button.transparent {
+
+    text-shadow:                    none;
+    --vanilla_ButtonText:           var(--vanilla_ButtonText-Normal);
+    --vanilla_ButtonBorderColor:    var(--vanilla_ButtonBorderColor-Normal);
+    --vanilla_ButtonBackground:     transparent;
+}
+
+/* --- Button - Action ------------------------------------------------------ */
+.vanilla .button:hover              { opacity:   var(--vanilla_ButtonOpacityWhenHover); }
+.vanilla .button.disabled:hover     { opacity:   1; }
+
+/* dung size va flex cho button de cac content ben trong duoc cang 100% */

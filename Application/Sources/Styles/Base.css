@@ -1,0 +1,87 @@
+@import "/Libraries/VanillaLib/VanillaLib.css";
+
+#__vanilla_studio__ {
+    
+    width:          100vw;
+    height:         100vh;
+    padding:        var(--vanilla_Spacing-2);
+}
+
+#__vanilla_header__ {
+
+    flex-direction:     row;
+    border:             var(--vanilla_BorderDefault);
+    border-color:       var(--vanilla_Color-Border);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+}
+
+#__vanilla_header__ > * { border-radius: var(--vanilla_BorderRadius-Default); }
+
+#__vanilla_panel__ {
+
+    flex:               1;
+    flex-direction:     row;
+}
+
+#__vanilla_panel--center__,
+#__vanilla_panel--center__  > .state,
+#__vanilla_panel--right__   > .state { flex: 1; min-height: 0;}
+
+#__vanilla_panel--left__,
+#__vanilla_panel--right__ { width: 400px;}
+
+.state {
+
+    padding:            var(--vanilla_Spacing-6);
+    border:             var(--vanilla_Border-Default);
+    border-color:       var(--vanilla_Color-Border);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+}
+#__vanilla_panel--left__ > .state:first-child { flex: 1; }
+#__vanilla_panel--left__ > .state:last-child { height: 300px; }
+
+.state > .state-title {
+
+    height:         fit-content;
+    padding-bottom: var(--vanilla_Spacing-4);
+    margin-bottom:  var(--vanilla_Spacing-4);
+    border-bottom:  1px solid var(--vanilla_Color-Border);
+    font-size:      var(--vanilla_FontSize-1);
+    font-weight:    var(--vanilla_FontWeight-3);
+    border-radius:  0;
+}
+
+.state .wrap, .state .tree, .state .column { flex: 1; }
+
+
+/* resizer */
+
+#__vanilla_panel--resizer__ {
+
+    position:           absolute;
+    top:                0;
+    left:               0;
+    right:              0;
+    bottom:             0;
+    z-index:            10;
+    background-color:   transparent;
+}
+
+#__vanilla_panel--resizer__ > .horizontal-bar {
+
+    position:           absolute;
+    min-width:          100px;
+    height:             var(--vanilla_Spacing-4);
+    border-radius:      var(--vanilla_BorderRadius-Max);
+    background-color:   aqua;
+}
+
+#__vanilla_panel--resizer__ > .vertical-bar {
+
+    position:           absolute;
+    left:               0;
+    width:              calc(var(--vanilla_GutterSize) / 2);
+    border-radius:      var(--vanilla_BorderRadius-Max);
+    min-height:         100px;
+    background-color:   aqua;
+}

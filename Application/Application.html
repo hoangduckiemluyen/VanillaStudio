@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Source/Styles/Base.css">
+
+</head>
+<body>
+    <div id="__vanilla_studio__" class="vanilla theme-dark">
+        <div id="__vanilla_header__">
+           <div class="menu">
+                <div class="overlay"></div>
+                <ul class="list" data-depth="0">
+                    <li class="item">
+                        <button class="field">File</button>
+                        <ul class="list" data-depth="1">
+                            <li class="item"><button class="field">New File</button></li>
+                            <li class="item"><button class="field">Open File</button></li>
+                            <li class="item"><button class="field">New Project</button></li>
+                            <li class="item"><button class="field">Open Project</button></li>
+                            <li class="item"><button class="field">Export</button></li>
+                            <li class="item"><button class="field">Exit</button></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <button class="field">Edit</button>
+                        <ul class="list" data-depth="1">
+                            <li class="item"><button class="field actived">New File</button></li>
+                            <li class="item"><button class="field">Open File</button></li>
+                            <li class="item"><button class="field">New Project</button></li>
+                            <li class="item"><button class="field">Open Project</button></li>
+                            <li class="item"><button class="field">Export</button></li>
+                            <li class="item"><button class="field">Exit</button></li>
+                            <li class="item"><button class="field"></button></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <button class="field">Selection</button>
+                    </li>
+                    <li class="item">
+                        <button class="field">View</button>
+                    </li>
+                    <li class="item">
+                        <button class="field">Help</button>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="half-gutter"></div>
+            
+        <div id="__vanilla_panel__">
+
+            <!-- <div id="__vanilla_panel--resizer__">
+                <div class="horizontal-bar"></div>
+                <div class="vertical-bar"></div>
+            </div> -->
+
+            <div  id="__vanilla_panel--left__">
+                <div class="toolbox state">
+                    <h1 class="state-title">HTML Elements</h1>
+                    <div class="wrap scroll">
+                        <ul class="list">
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                            <li class="item square l3"><button class="field">♥</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="half-gutter"></div>
+
+                <div class="file-browser state">
+                    <h1 class="state-title">File Browser</h1>
+                    <div class="tree scroll">
+                        <ul class="list">
+                            <li class="item">
+                                <button class="field folder ">HTML Tree</button>
+                                <ul class="list ">
+                                    <li class="item">
+                                        <button class="field folder ">Cascading Stylesheet.css</button>
+                                        <ul class="list ">
+                                            <li class="item"><button class="field file ">toolbox</button></li>
+                                            <li class="item"><button class="field file ">toolbox</button></li>
+                                            <li class="item"><button class="field file">toolbox</button></li>
+                                            <li class="item"><button class="field file">toolbox</button></li>
+                                            <li class="item">
+                                                <button class="field folder">toolbox</button>
+                                                <ul class="list">
+                                                    <li class="item">
+                                                        <button class="field folder">Cascading Stylesheet.css</button>
+                                                        <ul class="list">
+                                                            <li class="item"><button class="field file ">toolbox</button></li>
+                                                            <li class="item"><button class="field file ">toolbox</button></li>
+                                                            <li class="item"><button class="field file">toolbox</button></li>
+                                                            <li class="item"><button class="field file">toolbox</button></li>
+                                                            <li class="item"><button class="field file">toolbox</button></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="item"><button class="field file">Java Script.js</button></li>
+                                                    <li class="item"><button class="field file ">Hypertext Markup Language</button></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="item"><button class="field file">Java Script.js</button></li>
+                                    <li class="item"><button class="field file ">Hypertext Markup Language</button></li>
+                                </ul>
+                            </li>
+                            <li class="item">
+                                <button class="field folder">Other.hta</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="half-gutter"></div>
+
+            <div id="__vanilla_panel--center__">
+                <div class="state"></div>
+            </div>  
+
+            <div class="half-gutter"></div>
+
+            <div id="__vanilla_panel--right__">
+                <div class="resizebar vertical"></div>
+                <div class="state">
+                    <div class="state-title">Properties</div>
+                    <div class="wrap scroll">
+                        <ul class="list">
+
+                            <li class="item l12">
+                                <div class="wrap">
+                                    <ul class="list">
+                                        <li class="item y-center"><h6 class="h6">Size type:</h6> </li>
+                                        <li class="item fullwidth">
+                                            <div class="select">
+                                                <div class="overlay"></div>
+                                                <button class="field">Default</button>
+                                                <input type="text" class="data">
+                                                <div class="dropdown">
+                                                    <ul class="list">
+                                                        <li class="item">
+                                                            <button class="field" value="1">Default</button>
+                                                            <button class="field" value="8">Fixed</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="item l6">
+                                <div class="row">
+                                    <ul class="list">
+                                        <li class="item y-center"><h6 class="h6">Width (px):</h6></li>
+                                        <li class="item fullwidth">
+                                            <div class="textbox">
+                                                <div class="overlay"></div>
+                                                <div class="input ">
+                                                    <div class="main" contenteditable="true" id="input_1" data-placeholder="default"></div>
+                                                </div>
+                                                <input type="text" name="" class="data" id="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="item l6">
+                                <div class="row">
+                                    <ul class="list">
+                                        <li class="item y-center"><h6 class="h6">Height (px):</h6></li>
+                                        <li class="item fullwidth">
+                                            <div class="textbox">
+                                                <div class="overlay"></div>
+                                                <div class="input ">
+                                                    <div class="main" contenteditable="true" id="input_1"></div>
+                                                </div>
+                                                <input type="text" name="" class="data" id="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+
+                            <li class="item l12">
+                                <div class="wrap">
+                                    <ul class="list">
+                                        <li class="item y-center"><h6 class="h6">Size type:</h6> </li>
+                                        <li class="item fullwidth">
+                                            <div class="select">
+                                                <div class="overlay"></div>
+                                                <button class="field">Default</button>
+                                                <input type="text" class="data">
+                                                <div class="dropdown">
+                                                    <ul class="list">
+                                                        <li class="item">
+                                                            <button class="field" value="1">Default</button>
+                                                            <button class="field" value="8">Fixed</button>
+                                                            <button class="field" value="8">Fixed</button>
+                                                            <button class="field" value="8">Fixed</button>
+                                                            <button class="field" value="8">Fixed</button>
+                                                            <button class="field" value="8">Fixed</button>
+                                                            <button class="field" value="8">Fixed</button>
+                                                            <button class="field" value="8">Fixed</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="item l6">
+                                <div class="row">
+                                    <ul class="list">
+                                        <li class="item y-center"><h6 class="h6">Width (px):</h6></li>
+                                        <li class="item fullwidth">
+                                            <div class="textbox">
+                                                <div class="overlay"></div>
+                                                <div class="input ">
+                                                    <div class="main" contenteditable="true" id="input_1" data-placeholder="default"></div>
+                                                </div>
+                                                <input type="text" name="" class="data" id="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="item l6">
+                                <div class="row">
+                                    <ul class="list">
+                                        <li class="item y-center"><h6 class="h6">Height (px):</h6></li>
+                                        <li class="item fullwidth">
+                                            <div class="textbox">
+                                                <div class="overlay"></div>
+                                                <div class="input ">
+                                                    <div class="main" contenteditable="true" id="input_1"></div>
+                                                </div>
+                                                <input type="text" name="" class="data" id="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+
+                            <li class="item l12">
+                                <div class="wrap">
+                                    <ul class="list">
+                                        <li class="item y-center"><h6 class="h6">Display:</h6> </li>
+                                        <li class="item fullwidth">
+                                            <div class="select">
+                                                <div class="overlay"></div>
+                                                <button class="field">Default</button>
+                                                <input type="text" class="data">
+                                                <div class="dropdown">
+                                                    <ul class="list">
+                                                        <li class="item">
+                                                            <button class="field" value="8">none</button>
+                                                            <button class="field" value="1">Flex</button>
+                                                            <button class="field" value="8">Inline Flex</button>
+                                                            <button class="field" value="8">Block</button>
+                                                            <button class="field" value="8">Inline Block</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            
+
+                            <li class="item l12">
+                                <div class="wrap">
+                                    <ul class="list">
+                                        <li class="item y-center"><h6 class="h6">Main Axis:</h6> </li>
+                                        <li class="item fullwidth">
+                                            <div class="select">
+                                                <div class="overlay"></div>
+                                                <button class="field">Select</button>
+                                                <input type="text" class="data">
+                                                <div class="dropdown">
+                                                    <ul class="list">
+                                                        <li class="item">
+                                                            <button class="field" value="1">Horizontal</button>
+                                                            <button class="field" value="2">45</button>
+                                                            <button class="field" value="3">-45</button>
+                                                            <button class="field" value="4">Horizontal</button>
+                                                            <button class="field" value="5">Horizontal</button>
+                                                            <button class="field" value="6">Horizontal</button>
+                                                            <button class="field" value="7">Horizontal</button>
+                                                            <button class="field" value="8">Vertical</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="item l12">
+                                <div class="wrap">
+                                    <ul class="list">
+                                        <li class="item y-center l4"><h6 class="h6">Horizonal Align Items:</h6> </li>
+                                        <li class="item l8 fullwidth">
+                                            <div class="row">
+                                                <ul class="list">
+                                                    <li class="item square l3"><button class="field actived">Left</button></li>
+                                                    <li class="item square l3"><button class="field">Right</button></li>
+                                                    <li class="item square l3"><button class="field">Right</button></li>
+                                                    <li class="item square l3"><button class="field">Right</button></li>
+                                                    <li class=" item square l3"><button class="field">Stretch</button></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item l12">
+                                <div class="row">
+                                    <ul class="list">
+                                        <li class="item y-center"><h6 class="h6">Vertical Align Items:</h6> </li>
+                                        <li class="item fullwidth">
+                                            <div class="row scroll">
+                                                <ul class="list">
+                                                    <li class="item square l3"><button class="field ">Left</button></li>
+                                                    <li class="item square l3"><button class="field ">Left</button></li>
+                                                    <li class="item square l3"><button class="field ">Left</button></li>
+                                                    <li class="item square l3"><button class="field ">Left</button></li>
+                                                    <li class="item square l3"><button class="field">Stretch</button></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item l12">
+                                <div class="row">
+                                    <ul class="list">
+                                        <li class="item y-center"><h6 class="h6">Text content:</h6> </li>
+                                        <li class="item fullwidth">
+                                            <div class="textbox">
+                                                <div class="overlay"></div>
+                                                <div class="input">
+                                                    <div class="main" contenteditable="true" id="input_1" data-placeholder="default"></div>
+                                                </div>
+                                                <input type="text" name="" class="data" id="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toast top-right l3">
+            <ul class="list">
+                <li class="item">
+                    <div class="content completed">
+                        <div class="status"></div>
+                        <div class="message">Trong trường hợp này, content của bạn sẽ cực kỳ tối giản</div>
+                        <div class="progress"></div>
+                        <button class="close">X</button>
+                    </div>
+                </li>
+                <li class="item">
+                     <div class="content alert">
+                        <div class="status"></div>
+                        <div class="message">Trong trường hợp này, content của bạn sẽ cực kỳ tối giản</div>
+                        <div class="progress"></div>
+                        <button class="close">X</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="content danger">
+                        <div class="status"></div>
+                        <div class="message">Trong trường hợp này, content của bạn sẽ cực kỳ tối giản</div>
+                        <div class="progress"></div>
+                        <button class="close">X</button>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="content info">
+                        <div class="status"></div>
+                        <div class="message">Trong trường hợp này, content của bạn sẽ cực kỳ tối giản</div>
+                        <div class="progress"></div>
+                        <button class="close">X</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="modal actived">
+            <div class="overlay"></div>
+            <div class="close"></div>
+            <div class="dialog">
+                <div class="header">
+                    <h6 class="title">This is modal</h6>
+                    <button class="close">x</button>
+                </div>
+                <div class="body">
+                    
+                </div>
+                <div class="footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Libraries/VanillaLib/VanillaLib.js"></script>
+    <!-- <script src="../Libraries/VanillaLib/Menu.js"></script> -->
+</body>
+</html>

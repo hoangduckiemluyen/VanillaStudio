@@ -1,0 +1,19 @@
+.vanilla .column {
+    margin:             0 calc(var(--vanilla_GutterSize) * -1);
+    overflow-y:         auto;
+}
+
+.vanilla .column > .list {
+
+    position:           absolute;
+    left:               0;
+    right:              0;
+    flex-wrap:          nowrap;
+    justify-content:    flex-start;
+    margin-right:       calc(var(--vanilla_Scrollbar-Width) * -1); /*Tru hao cho scroll bar*/
+}
+
+.vanilla .column > .list > .item {
+    height:             fit-content;
+    padding:            var(--vanilla_GutterSize);
+}

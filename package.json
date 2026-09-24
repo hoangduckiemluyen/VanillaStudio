@@ -1,0 +1,43 @@
+{
+  "name": "vanillastudio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lib:build:scss": "sass Libraries/VanillaLib/Sources/SCSS/VanillaLib.scss Libraries/VanillaLib/Build/VanillaLib_1.0/VanillaLib.css",
+    "lib:watch:scss": "sass --watch Libraries/VanillaLib/Sources/SCSS/VanillaLib.scss:Libraries/VanillaLib/Build/VanillaLib_1.0/VanillaLib.css",
+    "lib:build:scss:min": "sass --style=compressed Libraries/VanillaLib/Sources/SCSS/VanillaLib.scss Libraries/VanillaLib/Build/VanillaLib_1.0/VanillaLib.min.css",
+    "lib:watch:scss:min": "sass --watch --style=compressed Libraries/VanillaLib/Sources/SCSS/VanillaLib.scss:Libraries/VanillaLib/Build/VanillaLib_1.0/VanillaLib.min.css",
+    "lib:build:ts": "esbuild Libraries/VanillaLib/Sources/Scripts/VanillaLib.ts --sourcemap --bundle --outfile=Libraries/VanillaLib/Build/VanillaLib_1.0/VanillaLib.js",
+    "lib:watch:ts": "esbuild Libraries/VanillaLib/Sources/Scripts/VanillaLib.ts --sourcemap --bundle --watch --outfile=Libraries/VanillaLib/Build/VanillaLib_1.0/VanillaLib.js",
+    "lib:build:ts:min": "esbuild Libraries/VanillaLib/Sources/Scripts/VanillaLib.ts --sourcemap --bundle --minify --outfile=Libraries/VanillaLib/Build/VanillaLib_1.0/VanillaLib.min.js",
+    "lib:watch:ts:min": "esbuild Libraries/VanillaLib/Sources/Scripts/VanillaLib.ts --sourcemap --bundle --minify --watch --outfile=Libraries/VanillaLib/Build/VanillaLib_1.0/VanillaLib.min.js",
+    "app:build:scss": "sass Application/Sources/Styles/Style.scss Application/Build/VanillaStudio_1.0/Style.css",
+    "app:watch:scss": "sass --watch Application/Sources/Styles/Style.scss:Application/Build/VanillaStudio_1.0/Style.css",
+    "app:build:scss:min": "sass --style=compressed Application/Sources/Styles/Style.scss Application/Build/VanillaStudio_1.0/Style.min.css",
+    "app:watch:scss:min": "sass --watch --style=compressed Application/Sources/Styles/Style.scss:Application/Build/VanillaStudio_1.0/Style.min.css",
+    "app:build:ts": "esbuild Application/Sources/Application.ts --sourcemap --bundle --outfile=Application/Build/VanillaStudio_1.0/Script.js",
+    "app:watch:ts": "esbuild Application/Sources/Application.ts --sourcemap --bundle --watch --outfile=Application/Build/VanillaStudio_1.0/Script.js",
+    "app:build:ts:min": "esbuild Application/Sources/Application.ts --sourcemap --bundle --minify --outfile=Application/Build/VanillaStudio_1.0/Script.min.js",
+    "app:watch:ts:min": "esbuild Application/Sources/Application.ts --sourcemap --bundle --minify --watch --outfile=Application/Build/VanillaStudio_1.0/Script.min.js",
+
+    "dev": "concurrently \"npm run lib:watch:scss\" \"npm run lib:watch:ts\" \"npm run app:watch:scss\" \"npm run app:watch:ts\"",
+    "build:min": "npm run lib:build:scss:min && npm run lib:build:ts:min && npm run app:build:scss:min && npm run app:build:ts:min"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Hoang Duc Kiem Luyen (Fedora Z)",
+    "email": "hoangduckiemluyen@gmail.com",
+    "url": "https://github.com/hoangduckiemluyen/"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "esbuild": "^0.28.2",
+    "esbuild-sass-plugin": "^3.7.0",
+    "sass": "^1.105.0",
+    "typescript": "^7.0.2"
+  }
+}
