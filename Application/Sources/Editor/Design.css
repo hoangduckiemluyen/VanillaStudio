@@ -1,0 +1,18 @@
+#__design__ {
+    flex: 1;
+    margin: -1px;
+}
+
+#__design__ .block {
+    
+    padding:        var(--vanilla_Spacing-1);
+    margin:         1px;
+    border:         var(--vanilla_Border-Default);
+    border-color:   var(--vanilla_Color-Border);
+    border-radius: var(--vanilla_BorderRadius-Default );
+}
+
+#__design__ .block > .title {
+    font-size:      var(--vanilla_FontSize-Default);
+    padding:        var(--vanilla_Spacing-2);
+}

@@ -1,0 +1,62 @@
+.vanilla .tab {}
+
+.vanilla .tab > .header {
+
+    padding-top:        var(--vanilla_Spacing-4);
+    padding-bottom:     var(--vanilla_Spacing-4);
+}
+
+.vanilla .tab > .header > .list {
+
+    flex-direction:     row;
+    border-bottom:      var(--vanilla_Border-Default);
+    border-color:       var(--vanilla_Color-Border);
+}
+
+.vanilla .tab > .header > .list > .item {
+    flex: 1;
+}
+
+.vanilla .tab > .header > .list > .item > .field {
+    
+    position: relative;
+    padding: var(--vanilla_Spacing-2) var(--vanilla_Spacing-3);
+    border: var(--vanilla_Border-Default);
+    border-top-left-radius: var(--vanilla_BorderRadius-Default);
+    border-top-right-radius: var(--vanilla_BorderRadius-Default);
+    border-bottom: none;
+    cursor: pointer;
+}
+
+.vanilla .tab > .header > .list > .item > .field.actived::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    background-color: var(--vanilla_Color-Background);
+}
+
+.vanilla .tab > .body {
+    flex: 1;
+}
+
+.vanilla .tab > .body > .list { flex: 1; }
+
+.vanilla .tab > .body > .list > .item {
+    display: none;
+    flex: 1;
+}
+
+.vanilla .tab > .header > .list > .item > .field.actived { border-color: var(--vanilla_Color-Border); }
+.vanilla .tab:has( > .header > .list > .item:nth-child(1) > .field.actived) > .body > .list > .item:nth-child(1) { display: flex; } 
+.vanilla .tab:has( > .header > .list > .item:nth-child(2) > .field.actived) > .body > .list > .item:nth-child(2) { display: flex; } 
+.vanilla .tab:has( > .header > .list > .item:nth-child(3) > .field.actived) > .body > .list > .item:nth-child(3) { display: flex; } 
+.vanilla .tab:has( > .header > .list > .item:nth-child(4) > .field.actived) > .body > .list > .item:nth-child(4) { display: flex; } 
+.vanilla .tab:has( > .header > .list > .item:nth-child(5) > .field.actived) > .body > .list > .item:nth-child(5) { display: flex; } 
+.vanilla .tab:has( > .header > .list > .item:nth-child(6) > .field.actived) > .body > .list > .item:nth-child(6) { display: flex; } 
+.vanilla .tab:has( > .header > .list > .item:nth-child(7) > .field.actived) > .body > .list > .item:nth-child(7) { display: flex; } 
+.vanilla .tab:has( > .header > .list > .item:nth-child(8) > .field.actived) > .body > .list > .item:nth-child(8) { display: flex; } 
+.vanilla .tab:has( > .header > .list > .item:nth-child(9) > .field.actived) > .body > .list > .item:nth-child(9) { display: flex; } 
+.vanilla .tab:has( > .header > .list > .item:nth-child(10) > .field.actived) > .body > .list > .item:nth-child(10) { display: flex; } 

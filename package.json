@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle:css": "npx esbuild ./Application/Sources/Style.css --bundle --minify --outfile=./Application/Build/Style.min.css"
+    "bundle:css": "npx esbuild ./Application/Sources/Style.css --bundle --minify --outfile=./Application/Build/Style.min.css",
+    "watch:bundle:css": "npx esbuild ./Application/Sources/Style.css --bundle --minify --outfile=./Application/Build/Style.min.css --watch" 
   },
   "keywords": [],
   "author": {
