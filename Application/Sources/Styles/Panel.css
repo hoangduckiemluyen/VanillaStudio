@@ -1,5 +1,6 @@
 @import "./Panel/Left/__Index__.css";
 @import "./Panel/Center/__Index__.css";
+@import "./Panel/Right/__Index__.css";
 
 #__vanilla_panel__ {
 

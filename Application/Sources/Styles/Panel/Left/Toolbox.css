@@ -1,4 +1,6 @@
-#__vanilla_panel--left__ .field {
+#__vanilla_panel--left__ .toolbox .field {
     border: var(--vanilla_Border-Default);
     border-color: var(--vanilla_Color-Border);
 }
+
+#__vanilla_panel--left__ .toolbox .field:hover { border-color: var(--vanilla_Color-Hover); }

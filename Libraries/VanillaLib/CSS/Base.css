@@ -37,6 +37,15 @@ body { box-sizing: border-box; }
 }
 
 /*-- theme -----------------------------------------------------------------------------------*/
+
+.vanilla {
+    --vanilla_Color-Background:         var(--vanilla_ThemeLightColor-Background);
+    --vanilla_Color-Border:             var(--vanilla_ThemeLightColor-Border);
+    --vanilla_Color-Text:               var(--vanilla_ThemeLightColor-Text);
+
+    background-color:                   var(--vanilla_Color-Background);
+}
+
 .vanilla.theme-dark {
     --vanilla_Color-Background:         var(--vanilla_ThemeDarkColor-Background);
     --vanilla_Color-Border:             var(--vanilla_ThemeDarkColor-Border);
@@ -57,7 +66,7 @@ body { box-sizing: border-box; }
 /* Chrome, Safari, Edge (Webkit) */
 .vanilla *::-webkit-scrollbar { 
 
-    display: none;
+    display: flex;
     width:  var(--vanilla_Scrollbar-Width); 
     height: var(--vanilla_Scrollbar-Width); 
 }
@@ -69,7 +78,8 @@ body { box-sizing: border-box; }
     border-radius:  var(--vanilla_BorderRadius-Max); 
 }
 
-.vanilla *::-webkit-scrollbar-thumb:hover { background: wheat; }
+.vanilla *::-webkit-scrollbar-thumb:hover { background: var(--vanilla_Color-Hover); }
+.vanilla *::-webkit-scrollbar-thumb:active { background: var(--vanilla_Color-Actived); }
 
 .vanilla .scrollbar {
 

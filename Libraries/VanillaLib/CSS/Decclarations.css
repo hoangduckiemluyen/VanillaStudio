@@ -82,7 +82,7 @@
     --vanilla_Spacing-4:            8px;
     --vanilla_Spacing-5:            10px;
     --vanilla_Spacing-6:            12px;
-    --vanilla_GutterSize:           8px;
+    --vanilla_GutterSize:           4px;
     --vanilla_ColPadding:           calc(var(--vanilla_GutterSize) / 2);
     --vanilla_RowNegativeMargin:    calc(var(--vanilla_GutterSize) / -2);
 
