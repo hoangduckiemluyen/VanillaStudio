@@ -1,0 +1,5 @@
+@import "./Toolbox.css";
+@import "./FileBrowser.css";
+
+#__vanilla_panel--left__ > .state:first-child { flex: 1; }
+#__vanilla_panel--left__ > .state:last-child { height: 300px; }

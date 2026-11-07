@@ -1,0 +1,9 @@
+#__vanilla_header__ {
+
+    flex-direction:     row;
+    border:             var(--vanilla_BorderDefault);
+    border-color:       var(--vanilla_Color-Border);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+}
+
+#__vanilla_header__ > * { border-radius: var(--vanilla_BorderRadius-Default); }

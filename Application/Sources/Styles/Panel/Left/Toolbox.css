@@ -1,0 +1,4 @@
+#__vanilla_panel--left__ .field {
+    border: var(--vanilla_Border-Default);
+    border-color: var(--vanilla_Color-Border);
+}

@@ -1,0 +1,30 @@
+@import "./Panel/Left/__Index__.css";
+@import "./Panel/Center/__Index__.css";
+
+#__vanilla_panel__ {
+
+    flex:               1;
+    flex-direction:     row;
+}
+
+.state {
+
+    padding:            var(--vanilla_Spacing-6);
+    border:             var(--vanilla_Border-Default);
+    border-color:       var(--vanilla_Color-Border);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+}
+
+.state > .state-title {
+
+    height:         fit-content;
+    padding-bottom: var(--vanilla_Spacing-4);
+    margin-bottom:  var(--vanilla_Spacing-4);
+    border-bottom:  1px solid var(--vanilla_Color-Border);
+    font-size:      var(--vanilla_FontSize-1);
+    font-weight:    var(--vanilla_FontWeight-3);
+    border-radius:  0;
+}
+
+.state .wrap, .state .tree, .state .column { flex: 1; }
+
