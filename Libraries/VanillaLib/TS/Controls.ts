@@ -7,11 +7,27 @@ enum Selector {
                         + Decl.Selector.ITEM + Decl.Character.GREATER + Decl.Selector.FIELD,
     MENU_FIELD_DEPTH_1  = Decl.Selector.DATA_DEPTH_1 + Decl.Character.GREATER 
                         + Decl.Selector.ITEM + Decl.Character.GREATER + Decl.Selector.FIELD,
+    TEXTBOX_OVERLAY     = Decl.Selector.SCOPE + Decl.Character.GREATER + Decl.Selector.OVERLAY,
+    TEXTBOX_INPUT       = Decl.Selector.SCOPE + Decl.Character.GREATER + Decl.Selector.INPUT,
+    TEXTBOX_INPUT_MAIN  = Decl.Selector.SCOPE + Decl.Character.GREATER + Decl.Selector.INPUT 
+                        + Decl.Character.GREATER + Decl.Selector.MAIN,
+    TEXTBOX_DATA        = Decl.Selector.SCOPE + Decl.Character.GREATER + Decl.Selector.DATA,
+    MODAL_OVERLAY       = Decl.Selector.SCOPE + Decl.Character.GREATER + Decl.Selector.OVERLAY,
+    MODAL_CLOSE         = Decl.Selector.SCOPE + Decl.Character.GREATER + Decl.Selector.DIALOG 
+                        + Decl.Character.GREATER + Decl.Selector.HEADER 
+                        + Decl.Character.GREATER + Decl.Selector.CLOSE,
+    TOAST_ITEM          = ":scope > .list > .item",
+    TOAST_CLOSE         = ":scope > .content > .close",
+    TOAST_PROGRESS      = ":scope > .content > .progress",
 }
 
-const MENU      : NodeListOf<Element>    = document.querySelectorAll(Decl.Selector.MENU);
-const TREE      : NodeListOf<Element>    = document.querySelectorAll(Decl.Selector.TREE);
-const SELECT    : NodeListOf<Element>   = document.querySelectorAll(Decl.Selector.SELECT);
+const MENU      : NodeListOf<Element>   = document.querySelectorAll (Decl.Selector.MENU);
+const TREE      : NodeListOf<Element>   = document.querySelectorAll (Decl.Selector.TREE);
+const SELECT    : NodeListOf<Element>   = document.querySelectorAll (Decl.Selector.SELECT);
+const TEXTBOX   : NodeListOf<Element>   = document.querySelectorAll (Decl.Selector.TEXTBOX);
+const MODAL     : NodeListOf<Element>   = document.querySelectorAll (Decl.Selector.MODAL);
+const TOAST     : HTMLDivElement        = document.querySelector    (Decl.Selector.TOAST) as HTMLDivElement;
+
 
 // ----- Menu ---------------------------------------------------------------------------------------------------------------
 MENU.forEach((menu) => {
@@ -46,6 +62,7 @@ MENU.forEach((menu) => {
     });
 })
 
+
 // ----- Tree ---------------------------------------------------------------------------------------------------------------
 TREE.forEach(tree => {
 
@@ -69,10 +86,11 @@ TREE.forEach(tree => {
     });
 });
 
+
 // ----- Select ---------------------------------------------------------------------------------------------------------------
 SELECT.forEach(select => {
 
-    let overlay     : HTMLDivElement                = select.querySelector(":scope > .overlay") as HTMLDivElement;
+    let overlay     : HTMLDivElement                = select.querySelector(Selector.TEXTBOX_OVERLAY) as HTMLDivElement;
     let selected    : HTMLButtonElement             = select.querySelector(":scope > .field")   as HTMLButtonElement;
     let data        : HTMLInputElement              = select.querySelector(":scope > .data")    as HTMLInputElement;
     let option      : NodeListOf<HTMLButtonElement> = select.querySelectorAll(":scope > .dropdown .field");
@@ -99,3 +117,47 @@ SELECT.forEach(select => {
         });
     });
 })
+
+
+// ----- Textbox ---------------------------------------------------------------------------------------------------------------
+TEXTBOX.forEach(textbox => {
+    let overlay     : HTMLDivElement    = textbox.querySelector(Selector.TEXTBOX_OVERLAY)       as HTMLDivElement;
+    let input       : HTMLDivElement    = textbox.querySelector(Selector.TEXTBOX_INPUT)         as HTMLDivElement;
+    let inputMain   : HTMLInputElement  = textbox.querySelector(Selector.TEXTBOX_INPUT_MAIN)    as HTMLInputElement;
+    let data        : HTMLInputElement  = textbox.querySelector(Selector.TEXTBOX_DATA)          as HTMLInputElement;
+
+    input.addEventListener("mousedown", (e)=>{
+        e.preventDefault();
+        inputMain.focus();
+    });
+
+    data.tabIndex = -1;
+    inputMain.addEventListener("input", ()=>{ data.value = inputMain.textContent; });
+    inputMain.addEventListener("focus", ()=>{ input.classList.add("actived"); });
+    inputMain.addEventListener("blur",  ()=>{ input.classList.remove("actived"); });
+});
+
+
+// ----- Modal ---------------------------------------------------------------------------------------------------------------
+MODAL.forEach(modal => {
+    let overlay     : HTMLDivElement = modal.querySelector(Selector.MODAL_OVERLAY) as HTMLDivElement;
+    let closeButton : HTMLButtonElement= modal.querySelector(Selector.MODAL_CLOSE) as HTMLButtonElement;
+
+    overlay.addEventListener("click", ()=> { modal.classList.remove("actived"); });
+    closeButton.addEventListener("click", ()=> { modal.classList.remove("actived"); });
+});
+
+
+// ----- Toast ---------------------------------------------------------------------------------------------------------------
+// let object_List     = object_Toast.querySelector(":scope > .list");
+let toastItem : NodeListOf<Element> = TOAST.querySelectorAll(Selector.TOAST_ITEM);
+
+toastItem.forEach(item => {
+    let closeButton : HTMLButtonElement = item.querySelector(Selector.TOAST_CLOSE)      as HTMLButtonElement;
+    let progressBar : HTMLDivElement    = item.querySelector(Selector.TOAST_PROGRESS)   as HTMLDivElement;
+
+    
+    setTimeout(()=>{ progressBar.classList.add("actived"); }, 0);
+    setTimeout(()=>{ item.remove() }, 5500);
+    closeButton.addEventListener("click", ()=>{ item.remove(); });
+});
