@@ -30,6 +30,24 @@ export enum HTML_Class {
 }
 
 export enum Selector {
+    FIELD_FOLDER        = ".field.folder",
+    FIELD_FILE          = ".field.file",
+    MENU_FIELD_DEPTH_0  = "[data-depth='0'] > .item > .field",
+    MENU_FIELD_DEPTH_1  = "[data-depth='1'] > .item > .field",
+    TEXTBOX_OVERLAY     = ":scope > .overlay",
+    TEXTBOX_INPUT       = ":scope > .input",
+    TEXTBOX_INPUT_MAIN  = ":scope > .input > .main",
+    TEXTBOX_DATA        = ":scope > .data",
+
+    MODAL_DIALOG        = ".modal .dialog",
+    MODAL_OVERLAY       = ".modal > .overlay",
+    MODAL_CLOSE         = ".header > .close",
+    MODAL_ACTION_CANCEL = ".footer > .action.cancel",
+
+    TOAST_ITEM          = ":scope > .list > .item",
+    TOAST_CLOSE         = ":scope > .content > .close",
+    TOAST_PROGRESS      = ":scope > .content > .progress",
+
     LIST            = ".list",
     ITEM            = ".item",
     FIELD           = ".field",
@@ -45,12 +63,7 @@ export enum Selector {
     FOLDER          = ".folder",
     SELECT          = ".select",
     TEXTBOX         = ".textbox",
-    INPUT           = ".input",
-    MAIN            = ".main",
     MODAL           = ".modal",
-    DIALOG          = ".dialog",
-    HEADER          = ".header",
-    CLOSE           = ".close",
     TOAST           = ".toast",
     THEME_DARK      = ".theme-dark",
     THEME_LIGHT     = ".theme-light",

@@ -75,6 +75,8 @@
     margin-left:        var(--vanilla_Spacing-4);
 }
 
+.vanilla .modal > .list > .item > .dialog > .header > .close:hover { border-color: var(--vanilla_Color-Hover); }
+
 .vanilla .modal > .list > .item > .dialog > .body {
     flex: 1;
 }
@@ -96,9 +98,12 @@
     border-radius:  var(--vanilla_BorderRadius-Default);
     margin:         0 var(--vanilla_Spacing-2);
     padding:        var(--vanilla_Spacing-2) var(--vanilla_Spacing-4);
+    cursor:         pointer;
 }
 
-.vanilla .modal > .list > .item > .dialog.actived   { display: flex; }
-.vanilla .modal:has(> .list > .item > .dialog.actived) > .overlay                  { z-index: var(--vanilla_ZIndex-Overlay); }
-.vanilla .modal:has(> .list > .item > .dialog.actived)                   { display: flex; }
-.vanilla .modal .dialog > .header > .close:hover  { border-color: var(--vanilla_Color-Hover); }
+.vanilla .modal > .list > .item > .dialog > .footer > .action:hover { border-color: var(--vanilla_Color-Hover); }
+
+.vanilla .modal > .list > .item > .dialog.actived                   { display: flex; }
+.vanilla .modal:has(> .list > .item > .dialog.actived)              { display: flex; }
+.vanilla .modal:has(> .list > .item > .dialog.actived) > .overlay   { z-index: var(--vanilla_ZIndex-Overlay); }
+.vanilla .modal .dialog > .header > .close:hover                    { border-color: var(--vanilla_Color-Hover); }
