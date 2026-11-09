@@ -12,10 +12,11 @@ enum Selector {
     TEXTBOX_INPUT_MAIN  = Decl.Selector.SCOPE + Decl.Character.GREATER + Decl.Selector.INPUT 
                         + Decl.Character.GREATER + Decl.Selector.MAIN,
     TEXTBOX_DATA        = Decl.Selector.SCOPE + Decl.Character.GREATER + Decl.Selector.DATA,
-    MODAL_OVERLAY       = Decl.Selector.SCOPE + Decl.Character.GREATER + Decl.Selector.OVERLAY,
-    MODAL_CLOSE         = Decl.Selector.SCOPE + Decl.Character.GREATER + Decl.Selector.DIALOG 
-                        + Decl.Character.GREATER + Decl.Selector.HEADER 
-                        + Decl.Character.GREATER + Decl.Selector.CLOSE,
+
+    MODAL_DIALOG        = ".modal .dialog",
+    MODAL_OVERLAY       = ".modal > .overlay",
+    MODAL_CLOSE         = ":scope > .dialog > .header > .close",
+
     TOAST_ITEM          = ":scope > .list > .item",
     TOAST_CLOSE         = ":scope > .content > .close",
     TOAST_PROGRESS      = ":scope > .content > .progress",
@@ -25,7 +26,7 @@ const MENU      : NodeListOf<Element>   = document.querySelectorAll (Decl.Select
 const TREE      : NodeListOf<Element>   = document.querySelectorAll (Decl.Selector.TREE);
 const SELECT    : NodeListOf<Element>   = document.querySelectorAll (Decl.Selector.SELECT);
 const TEXTBOX   : NodeListOf<Element>   = document.querySelectorAll (Decl.Selector.TEXTBOX);
-const MODAL     : NodeListOf<Element>   = document.querySelectorAll (Decl.Selector.MODAL);
+// const MODAL     : NodeListOf<Element>   = document.querySelectorAll (Decl.Selector.MODAL);
 const TOAST     : HTMLDivElement        = document.querySelector    (Decl.Selector.TOAST) as HTMLDivElement;
 
 
@@ -139,13 +140,13 @@ TEXTBOX.forEach(textbox => {
 
 
 // ----- Modal ---------------------------------------------------------------------------------------------------------------
-MODAL.forEach(modal => {
-    let overlay     : HTMLDivElement = modal.querySelector(Selector.MODAL_OVERLAY) as HTMLDivElement;
-    let closeButton : HTMLButtonElement= modal.querySelector(Selector.MODAL_CLOSE) as HTMLButtonElement;
+// MODAL.forEach(modal => {
+//     let overlay     : HTMLDivElement = modal.querySelector(Selector.MODAL_OVERLAY) as HTMLDivElement;
+//     let closeButton : HTMLButtonElement= modal.querySelector(Selector.MODAL_CLOSE) as HTMLButtonElement;
 
-    overlay.addEventListener("click", ()=> { modal.classList.remove("actived"); });
-    closeButton.addEventListener("click", ()=> { modal.classList.remove("actived"); });
-});
+//     overlay.addEventListener("click", ()=> { modal.classList.remove("actived"); });
+//     closeButton.addEventListener("click", ()=> { modal.classList.remove("actived"); });
+// });
 
 
 // ----- Toast ---------------------------------------------------------------------------------------------------------------

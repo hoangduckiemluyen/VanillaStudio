@@ -6,8 +6,6 @@
     right:              0;
     bottom:             0;
     display:            none;
-    align-items:        center;
-    justify-content:    center;
 }
 
 .vanilla .modal > .overlay {
@@ -21,7 +19,16 @@
     background-color:   var(--vanilla_Color-Overlay);
 }
 
-.vanilla .modal > .dialog {
+.vanilla .modal > .list { 
+    flex:               1;
+    justify-content:    center;
+}
+.vanilla .modal > .list > .item {
+    flex:               1; 
+    justify-content:    center; 
+    align-items:        center;}
+
+.vanilla .modal > .list > .item > .dialog {
 
     aspect-ratio:       1/1;
     padding:            var(--vanilla_Spacing-4);
@@ -33,7 +40,7 @@
 
 }
 
-.vanilla .modal > .dialog > .header {
+.vanilla .modal > .list > .item > .dialog > .header {
 
     flex-direction:     row;
     align-items:        center;
@@ -44,14 +51,14 @@
     margin-bottom:      var(--vanilla_Spacing-4);
 }
 
-.vanilla .modal > .dialog > .header > .title {
+.vanilla .modal > .list > .item > .dialog > .header > .title {
     
     font-size:          var(--vanilla_FontSize-2);
     font-weight:        var(--vanilla_FontWeight-3);
     padding-right:      var(--vanilla_Spacing-4);
 }
 
-.vanilla .modal > .dialog > .header > .close {
+.vanilla .modal > .list > .item > .dialog > .header > .close {
 
     aspect-ratio:       1/1;
     align-items:        center;
@@ -68,17 +75,30 @@
     margin-left:        var(--vanilla_Spacing-4);
 }
 
-.vanilla .modal > .dialog > .body {
+.vanilla .modal > .list > .item > .dialog > .body {
     flex: 1;
 }
 
-.vanilla .modal > .dialog > .footer {
+.vanilla .modal > .list > .item > .dialog > .footer {
+
+    flex-direction:     row;
+    align-items:        center;
+    justify-content:    end;
     margin-top:         var(--vanilla_Spacing-4);
     padding-top:        var(--vanilla_Spacing-4);
     border-top:         var(--vanilla_Border-Default);
     border-color:       var(--vanilla_Color-Border);
 }
 
-.vanilla .modal.actived                             { display: flex; }
-.vanilla .modal.actived > .overlay                  { z-index: var(--vanilla_ZIndex-Overlay); }
-.vanilla .modal > .dialog > .header > .close:hover  { border-color: var(--vanilla_Color-Hover); }
+.vanilla .modal > .list > .item > .dialog > .footer > .action {
+    border:         var(--vanilla_Border-Default);
+    border-color:   var(--vanilla_Color-Border);
+    border-radius:  var(--vanilla_BorderRadius-Default);
+    margin:         0 var(--vanilla_Spacing-2);
+    padding:        var(--vanilla_Spacing-2) var(--vanilla_Spacing-4);
+}
+
+.vanilla .modal > .list > .item > .dialog.actived   { display: flex; }
+.vanilla .modal:has(> .list > .item > .dialog.actived) > .overlay                  { z-index: var(--vanilla_ZIndex-Overlay); }
+.vanilla .modal:has(> .list > .item > .dialog.actived)                   { display: flex; }
+.vanilla .modal .dialog > .header > .close:hover  { border-color: var(--vanilla_Color-Hover); }

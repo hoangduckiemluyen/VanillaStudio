@@ -5,7 +5,12 @@
     margin:             calc(var(--vanilla_GutterSize) * -1);
 }
 
-.vanilla .row > .list > .item { padding: var(--vanilla_GutterSize); }
+.vanilla .row > .list > .item { 
+    padding: var(--vanilla_GutterSize);
+    flex: 1;
+}
+
+.vanilla .row > .list > .item > * { flex: 1; }
 
 .vanilla .row > .list > .item > .field {
     

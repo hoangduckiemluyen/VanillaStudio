@@ -5,10 +5,14 @@
 } 
 
 #__design__ .header { 
-    padding-bottom:     var(--vanilla_Spacing-4);
+    padding-top:        var(--vanilla_Spacing-2);
+    padding-bottom:     var(--vanilla_Spacing-2);
     border-bottom:      var(--vanilla_Border-Default); 
     border-color:       var(--vanilla_Color-Border);
     margin-bottom:      var(--vanilla_Spacing-4); 
+    border:             var(--vanilla_Border-Default);
+    border-color:       var(--vanilla_Color-Border);
+    border-radius:      var(--vanilla_BorderRadius-Default);
 }
 
 #__design__ .header > .list { 

@@ -5,9 +5,12 @@
     font-weight:                var(--vanilla_FontWeight-Default);
     color:                      var(--vanilla_Color-Text);
     font-optical-sizing:        auto;
+    justify-content:            center;
     font-style:                 normal;
     font-variation-settings:    width 100;
 }
+
+.vanilla .text.nowrap { white-space: nowrap;}
 
 .vanilla .text.h6 {
 

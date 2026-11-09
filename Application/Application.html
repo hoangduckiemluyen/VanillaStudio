@@ -24,35 +24,15 @@
                     <li class="item">
                         <button class="field">File</button>
                         <ul class="list" data-depth="1">
-                            <li class="item"><button class="field">New File</button></li>
-                            <li class="item"><button class="field">Open File</button></li>
                             <li class="item"><button class="field">New Project</button></li>
-                            <li class="item"><button class="field">Open Project</button></li>
-                            <li class="item"><button class="field">Export</button></li>
+                            <li class="item"><button class="field">Close Project</button></li>
+                            <li class="item"><button class="field">Add File</button></li>
+                            <li class="item"><button class="field">Save</button></li>
                             <li class="item"><button class="field">Exit</button></li>
                         </ul>
                     </li>
-                    <li class="item">
-                        <button class="field">Edit</button>
-                        <ul class="list" data-depth="1">
-                            <li class="item"><button class="field actived">New File</button></li>
-                            <li class="item"><button class="field">Open File</button></li>
-                            <li class="item"><button class="field">New Project</button></li>
-                            <li class="item"><button class="field">Open Project</button></li>
-                            <li class="item"><button class="field">Export</button></li>
-                            <li class="item"><button class="field">Exit</button></li>
-                            <li class="item"><button class="field"></button></li>
-                        </ul>
-                    </li>
-                    <li class="item">
-                        <button class="field">Selection</button>
-                    </li>
-                    <li class="item">
-                        <button class="field">View</button>
-                    </li>
-                    <li class="item">
-                        <button class="field">Help</button>
-                    </li>
+                    <li class="item"><button class="field">Export</button></li>
+                    <li class="item"><button class="field">About</button></li>
                 </ul>
             </div>
             <!-- End: Header - Menu -------------------------------------------------------------------------------------- -->
@@ -70,7 +50,7 @@
 
                 <!-- Begin: Panel - Left - toolbox ------------------------------------------------------------------- -->
                 <div class="toolbox state">
-                    <h1 class="state-title">HTML Elements</h1>
+                    <h1 class="state-title">Elements</h1>
                     <div class="wrap scroll">
                         <ul class="list">
                             <li class="item square l3"><button class="field">HTML</button></li>
@@ -83,6 +63,28 @@
                             <li class="item square l3"><button class="field">button</button></li>
                             <li class="item square l3"><button class="field">text</button></li>
                             <li class="item square l3"><button class="field">heading</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End: Panel - Left - toolbox ------------------------------------------------------------------- -->
+
+                <div class="half-gutter"></div>
+
+                <!-- Begin: Panel - Left - toolbox ------------------------------------------------------------------- -->
+                <div class="toolbox state">
+                    <h1 class="state-title">Components</h1>
+                    <div class="wrap scroll">
+                        <ul class="list">
+                            <li class="item square l3"><button class="field">Row</button></li>
+                            <li class="item square l3"><button class="field">Col</button></li>
+                            <li class="item square l3"><button class="field">form</button></li>
+                            <li class="item square l3"><button class="field">menu</button></li>
+                            <li class="item square l3"><button class="field">modal</button></li>
+                            <li class="item square l3"><button class="field">select</button></li>
+                            <li class="item square l3"><button class="field">toast</button></li>
+                            <li class="item square l3"><button class="field">card</button></li>
+                            <li class="item square l3"><button class="field">text</button></li>
+                            <li class="item square l3"><button class="field">wrap</button></li>
                         </ul>
                     </div>
                 </div>
@@ -538,20 +540,69 @@
         <!-- End: Toast ---------------------------------------------------------------------------------------------------- -->
 
         <!-- Begin: Modal ---------------------------------------------------------------------------------------------------- -->
-        <!-- <div class="modal actived">
+        <div class="modal">
             <div class="overlay"></div>
-            <div class="close"></div>
-            <div class="dialog l3">
-                <div class="header">
-                    <h6 class="title">This is modal</h6>
-                    <button class="close">x</button>
-                </div>
-                <div class="body">
-                    Hi! I am developer!
-                </div>
-                <div class="footer">amazing</div>
-            </div>
-        </div> -->
+            <ul class="list">
+                 
+                <!-- Begin: Modal - Create Project ---------------------------------------------------------------------------------------------------- -->
+                <li class="item">
+                    <div class="dialog l2 actived">
+                        <div class="header">
+                            <h6 class="title">New Project</h6>
+                            <!-- <button class="close">x</button> -->
+                        </div>
+                        <div class="body">
+                            <div class="row">
+                                <ul class="list">
+                                    <li class="item l6"><p class="text nowrap">Project Name: </p></li>
+                                    <li class="item l6">
+                                        <div class="textbox">
+                                            <div class="overlay"></div>
+                                            <div class="input">
+                                                <div class="main" contenteditable="true" id="input_1"></div>
+                                            </div>
+                                            <input type="text" name="" class="data" id="">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="half-gutter"></div>
+
+                            <div class="row">
+                                <ul class="list">
+                                    <li class="item l6"><p class="text nowrap">Library: </p></li>
+                                    <li class="item l6">
+                                        <div class="select">
+                                            <div class="overlay"></div>
+                                            <button class="field">Default</button>
+                                            <input type="text" class="data">
+                                            <div class="dropdown">
+                                                <ul class="list">
+                                                    <li class="item">
+                                                        <button class="field" value="8">Vanilla Lib 1.0</button>
+                                                        <button class="field" value="1">Vanilla Lib 1.1</button>
+                                                        <button class="field" value="8">Vanilla Lib 1.3</button>
+                                                        <button class="field" value="8">Vanilla Lib 1.6</button>
+                                                        <button class="field" value="8">Vanilla Lib 1.32</button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <button class="action">Apply</button>
+                            <button class="action">Cancel</button>
+                        </div>
+                    </div>
+                </li>
+                <!-- End: Modal - Create Project ---------------------------------------------------------------------------------------------------- -->
+            
+            </ul>
+        </div>
         <!-- End: Modal ---------------------------------------------------------------------------------------------------- -->
 
     </div>

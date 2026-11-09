@@ -1,6 +1,5 @@
 .vanilla .menu {
-    padding:            2px; /* de hien ro phan hover & actived */
-    z-index:            10;
+    /* z-index:            10; */
 }
 
 .vanilla .menu > .overlay {
@@ -35,7 +34,7 @@
     z-index:            var(--vanilla_ZIndex-Default);
     border:             var(--vanilla_Border-Default);
     border-radius:      var(--vanilla_BorderRadius-Default);
-    padding:            var(--vanilla_Spacing-2) var(--vanilla_Spacing-4);
+    padding:            0 var(--vanilla_Spacing-3);
 }
 
 .vanilla .menu .list > .item > .switch > .status { display: none; }

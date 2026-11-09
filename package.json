@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bundle:css": "npx esbuild ./Application/Sources/Style.css --bundle --minify --outfile=./Application/Build/Style.min.css",
+    "bundle:css": "npx esbuild ./Application/Sources/Styles/__Index__.css --bundle --minify --outfile=./Application/Build/Style.min.css",
     "bundle:ts": "npx esbuild ./Application/Sources/Scripts/__Index__.ts --bundle --minify --target=es2020 --sourcemap --outfile=./Application/Build/Script.min.js",
     "watch:bundle:css": "npx esbuild ./Application/Sources/Styles/__Index__.css --bundle --minify --outfile=./Application/Build/Style.min.css --watch" ,
     "watch:bundle:ts": "npx esbuild ./Application/Sources/Scripts/__Index__.ts  --bundle --minify --target=es2020 --sourcemap --outfile=./Application/Build/Script.min.js --watch"

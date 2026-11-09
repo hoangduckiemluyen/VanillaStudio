@@ -1,8 +1,9 @@
-.vanilla .tab {}
+/* .vanilla .tab {} */
 
 .vanilla .tab > .header {
 
-    
+    border-bottom:          var(--vanilla_Border-Default);
+    border-color:           var(--vanilla_Color-Border);
 }
 
 .vanilla .tab > .header > .list {
@@ -38,11 +39,8 @@
 
 .vanilla .tab > .body {
     flex:                   1;
-    border:                 var(--vanilla_Border-Default);
-    border-radius:          var(--vanilla_BorderRadius-Default);
-    border-top-left-radius: 0;
-    border-color:           var(--vanilla_Color-Border);
-    padding:                var(--vanilla_Spacing-3);
+    padding-top:            var(--vanilla_Spacing-4);
+    padding-bottom:         var(--vanilla_Spacing-4);
 }
 
 .vanilla .tab > .body > .list { flex: 1; }
