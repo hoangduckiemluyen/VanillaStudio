@@ -1,6 +1,8 @@
-@import url("./CSS/Decclarations.css");
+@import url("./CSS/Declarations.css");
 @import url("./CSS/Base.css");
+@import url("./CSS/Component.css");
 
+@import url("./CSS/Components/Inline.css");
 @import url("./CSS/Components/Avatar.css");
 @import url("./CSS/Components/Box.css");
 @import url("./CSS/Components/Column.css");

@@ -1,0 +1,123 @@
+/* --- Component -------------------------------------------------------------------- */
+.vanilla .component {
+
+    all:                initial;
+    margin:             0;
+    padding:            0;
+    border:             none;
+    box-sizing:         inherit;
+
+    width:              100%;
+    min-width:          0;
+    min-height:         0;
+    display:            flex;
+    flex-wrap:          nowrap;
+    white-space:        nowrap;
+    align-items:        stretch;
+    align-content:      flex-start;
+    flex-direction:     column;
+    justify-content:    flex-start;
+    background-color:   transparent;
+    user-select:        none;
+    outline:            none;
+    cursor:             default;
+    font-family:        var(--vanilla_FontFamily);
+    font-size:          var(--vanilla_FontSize-Default);
+    color:              var(--vanilla_Color-Text);
+}
+
+
+/* --- List -------------------------------------------------------------------- */
+.vanilla .component .list {
+
+    all:                initial;
+    margin:             0;
+    padding:            0;
+    border:             none;
+    box-sizing:         inherit;
+    list-style-type:    none;
+    
+    min-width:          0;
+    min-height:         0;
+    display:            flex;
+    align-items:        stretch;
+    align-content:      flex-start;
+    flex-direction:     column;
+    justify-content:    flex-start;
+    background-color:   transparent;
+    white-space:        nowrap;
+    user-select:        none;
+    outline:            none;
+    cursor:             default;
+    font-family:        var(--vanilla_FontFamily);
+    font-size:          var(--vanilla_FontSize-Default);
+    color:              var(--vanilla_Color-Text);
+}
+
+
+/* --- Item -------------------------------------------------------------------- */
+.vanilla .component .list .item {
+
+    all:                initial;
+    margin:             0;
+    padding:            0;
+    border:             none;
+    box-sizing:         inherit;
+
+    min-width:          0;
+    min-height:         0;
+    display:            flex;
+    flex-wrap:          nowrap;
+    align-items:        stretch;
+    align-content:      flex-start;
+    flex-direction:     column;
+    white-space:        nowrap;
+    justify-content:    flex-start;
+    background-color:   transparent;
+    user-select:        none;
+    outline:            none;
+    cursor:             default;
+    font-family:        var(--vanilla_FontFamily);
+    font-size:          var(--vanilla_FontSize-Default);
+    color:              var(--vanilla_Color-Text);
+}
+
+.vanilla .component .list .item .field {
+
+    all:                initial;
+    margin:             0;
+    padding:            0;
+    border:             none;
+    box-sizing:         inherit;
+
+    display:            flex;
+    flex-direction:     row;
+    align-items:        center;
+    justify-content:    center;
+    white-space:        nowrap;
+    text-decoration:    none;
+    cursor:             pointer;
+    border:             var(--vanilla_Border-Default);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+    font-family:        var(--vanilla_FontFamily);
+    font-size:          var(--vanilla_FontSize-Default);
+    color:              var(--vanilla_Color-Text);
+}
+
+.vanilla .component .overlay {
+
+    all:                initial;
+    margin:             0;
+    padding:            0;
+    border:             none;
+    box-sizing:         inherit;
+    
+    position:           fixed;
+    top:                0;
+    left:               0;
+    right:              0;
+    bottom:             0;
+    display:            none;
+    z-index:            var(--vanilla_ZIndex-Hidden);
+    background-color:   var(--vanilla_Color-Overlay);
+}

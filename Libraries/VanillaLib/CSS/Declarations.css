@@ -76,13 +76,14 @@
 /* --- Grid Constant ---------------------------------------------------------------------------- */
 .vanilla {
 
+    --vanilla_Size-Gutter:          4px;
+
     --vanilla_Spacing-1:            2px;
     --vanilla_Spacing-2:            4px;
     --vanilla_Spacing-3:            6px;
     --vanilla_Spacing-4:            8px;
     --vanilla_Spacing-5:            10px;
     --vanilla_Spacing-6:            12px;
-    --vanilla_GutterSize:           4px;
     --vanilla_ColPadding:           calc(var(--vanilla_GutterSize) / 2);
     --vanilla_RowNegativeMargin:    calc(var(--vanilla_GutterSize) / -2);
 

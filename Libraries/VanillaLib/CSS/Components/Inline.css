@@ -1,0 +1,11 @@
+.vanilla .component.inline {
+
+}
+
+.vanilla .component.inline              .list { margin: calc(var(--vanilla_Size-Gutter) * -1); }
+.vanilla .component.inline.horizontal   .list { flex-direction: row; }
+.vanilla .component.inline.vertical     .list { flex-direction: column; }
+.vanilla .component.inline.wrap         .list { flex-wrap: wrap; }
+.vanilla .component.inline.nowrap       .list { flex-wrap: nowrap; }
+
+.vanilla .component.inline .list .item { padding: calc(var(--vanilla_Size-Gutter)); }

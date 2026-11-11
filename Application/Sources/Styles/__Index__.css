@@ -1,11 +1,11 @@
 @import "../../../Libraries/VanillaLib/VanillaLib.css";
-@import "./Header.css";
-@import "./Panel.css";
+/* @import "./Header.css"; */
+/* @import "./Panel.css"; */
 
 #__vanilla_studio__ {
     
     width:          100vw;
     height:         100vh;
-    padding:        var(--vanilla_Spacing-2);
+    padding:        var(--vanilla_Size-Gutter) !important;
 }
 

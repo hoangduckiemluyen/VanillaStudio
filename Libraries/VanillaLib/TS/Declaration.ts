@@ -32,8 +32,8 @@ export enum HTML_Class {
 export enum Selector {
     FIELD_FOLDER        = ".field.folder",
     FIELD_FILE          = ".field.file",
-    MENU_FIELD_DEPTH_0  = "[data-depth='0'] > .item > .field",
-    MENU_FIELD_DEPTH_1  = "[data-depth='1'] > .item > .field",
+    MENU_FIELD_DEPTH_0  = "[depth='0'] > .item > .field",
+    MENU_FIELD_DEPTH_1  = "[depth='1'] > .item > .field",
     TEXTBOX_OVERLAY     = ":scope > .overlay",
     TEXTBOX_INPUT       = ":scope > .input",
     TEXTBOX_INPUT_MAIN  = ":scope > .input > .main",
@@ -68,9 +68,9 @@ export enum Selector {
     THEME_DARK      = ".theme-dark",
     THEME_LIGHT     = ".theme-light",
     DATA            = ".data",
-    DATA_DEPTH_0    = "[data-depth='0']",
-    DATA_DEPTH_1    = "[data-depth='1']",
-    DATA_DEPTH_2    = "[data-depth='2']",
+    DATA_DEPTH_0    = "[depth='0']",
+    DATA_DEPTH_1    = "[depth='1']",
+    DATA_DEPTH_2    = "[depth='2']",
     SCOPE           = ":scope",
 }
 

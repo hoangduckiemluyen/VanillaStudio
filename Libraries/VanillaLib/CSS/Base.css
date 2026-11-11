@@ -10,14 +10,15 @@
 html { font-size: var(--vanilla_HTMLFontSize); }
 body { box-sizing: border-box; }
 
-.vanilla ul {
-    list-style-type:    none;
-}
+.vanilla {
 
-.vanilla { width: 100%; }
+    all:                initial;
+    margin:             0;
+    padding:            0;
+    border:             none;
+    box-sizing:         inherit;
 
-.vanilla, .vanilla * {
-
+    width:              100%;
     min-width:          0;
     min-height:         0;
     display:            flex;
@@ -30,6 +31,7 @@ body { box-sizing: border-box; }
     user-select:        none;
     outline:            none;
     cursor:             default;
+    background-color:   var(--vanilla_Color-Background);
     font-family:        var(--vanilla_FontFamily);
     font-size:          var(--vanilla_FontSize-Default);
     color:              var(--vanilla_Color-Text);
@@ -39,19 +41,17 @@ body { box-sizing: border-box; }
 /*-- theme -----------------------------------------------------------------------------------*/
 
 .vanilla {
+
     --vanilla_Color-Background:         var(--vanilla_ThemeLightColor-Background);
     --vanilla_Color-Border:             var(--vanilla_ThemeLightColor-Border);
     --vanilla_Color-Text:               var(--vanilla_ThemeLightColor-Text);
-
-    background-color:                   var(--vanilla_Color-Background);
 }
 
 .vanilla.theme-dark {
+
     --vanilla_Color-Background:         var(--vanilla_ThemeDarkColor-Background);
     --vanilla_Color-Border:             var(--vanilla_ThemeDarkColor-Border);
     --vanilla_Color-Text:               var(--vanilla_ThemeDarkColor-Text);
-
-    background-color:                   var(--vanilla_Color-Background);
 }
 
 .vanilla.theme-light {
@@ -84,4 +84,9 @@ body { box-sizing: border-box; }
 .vanilla .scrollbar {
 
     position: absolute;
+}
+
+.border { 
+    border: var(--vanilla_Border-Default);
+    border-color: var(--vanilla_Color-Border); 
 }
