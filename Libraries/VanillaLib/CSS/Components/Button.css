@@ -1,3 +1,11 @@
+.vanilla .button {
+    
+    flex-direction:     row;
+    align-items:        center;
+    justify-content:    center;
+    white-space:        nowrap;
+    padding:            var(--vanilla_Spacing-2) var(--vanilla_Spacing-4);
+}
 
 /* --- Button - Color ------------------------------------------------------- */
 .vanilla .button.primary {

@@ -4,12 +4,12 @@
 
 @import url("./CSS/Components/Inline.css");
 @import url("./CSS/Components/Avatar.css");
-@import url("./CSS/Components/Box.css");
 @import url("./CSS/Components/Column.css");
 @import url("./CSS/Components/Form.css");
 @import url("./CSS/Components/Menu.css");
 @import url("./CSS/Components/Modal.css");
 @import url("./CSS/Components/Row.css");
+@import url("./CSS/Components/Button.css");
 @import url("./CSS/Components/Scrollbar.css");
 @import url("./CSS/Components/Seperator.css");
 @import url("./CSS/Components/Text.css");
@@ -18,5 +18,6 @@
 @import url("./CSS/Components/Wrap.css");
 @import url("./CSS/Components/Select.css");
 @import url("./CSS/Components/Tab.css");
+@import url("./CSS/Components/Box.css");
 
 @import url("./CSS/Responsive.css");

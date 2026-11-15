@@ -10,15 +10,14 @@
 html { font-size: var(--vanilla_HTMLFontSize); }
 body { box-sizing: border-box; }
 
-.vanilla {
+.vanilla ul {
+    list-style-type:    none;
+}
 
-    all:                initial;
-    margin:             0;
-    padding:            0;
-    border:             none;
-    box-sizing:         inherit;
+.vanilla { width: 100%; }
 
-    width:              100%;
+.vanilla, .vanilla * {
+
     min-width:          0;
     min-height:         0;
     display:            flex;
@@ -31,7 +30,6 @@ body { box-sizing: border-box; }
     user-select:        none;
     outline:            none;
     cursor:             default;
-    background-color:   var(--vanilla_Color-Background);
     font-family:        var(--vanilla_FontFamily);
     font-size:          var(--vanilla_FontSize-Default);
     color:              var(--vanilla_Color-Text);
@@ -39,19 +37,12 @@ body { box-sizing: border-box; }
 }
 
 /*-- theme -----------------------------------------------------------------------------------*/
-
-.vanilla {
-
-    --vanilla_Color-Background:         var(--vanilla_ThemeLightColor-Background);
-    --vanilla_Color-Border:             var(--vanilla_ThemeLightColor-Border);
-    --vanilla_Color-Text:               var(--vanilla_ThemeLightColor-Text);
-}
-
 .vanilla.theme-dark {
-
     --vanilla_Color-Background:         var(--vanilla_ThemeDarkColor-Background);
     --vanilla_Color-Border:             var(--vanilla_ThemeDarkColor-Border);
     --vanilla_Color-Text:               var(--vanilla_ThemeDarkColor-Text);
+
+    background-color:                   var(--vanilla_Color-Background);
 }
 
 .vanilla.theme-light {
@@ -66,7 +57,7 @@ body { box-sizing: border-box; }
 /* Chrome, Safari, Edge (Webkit) */
 .vanilla *::-webkit-scrollbar { 
 
-    display: flex;
+    display: none;
     width:  var(--vanilla_Scrollbar-Width); 
     height: var(--vanilla_Scrollbar-Width); 
 }
@@ -78,15 +69,9 @@ body { box-sizing: border-box; }
     border-radius:  var(--vanilla_BorderRadius-Max); 
 }
 
-.vanilla *::-webkit-scrollbar-thumb:hover { background: var(--vanilla_Color-Hover); }
-.vanilla *::-webkit-scrollbar-thumb:active { background: var(--vanilla_Color-Actived); }
+.vanilla *::-webkit-scrollbar-thumb:hover { background: wheat; }
 
 .vanilla .scrollbar {
 
     position: absolute;
-}
-
-.border { 
-    border: var(--vanilla_Border-Default);
-    border-color: var(--vanilla_Color-Border); 
 }

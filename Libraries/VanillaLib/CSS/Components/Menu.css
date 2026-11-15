@@ -1,12 +1,143 @@
+.vanilla .menu              > .list                         { 
 
-.vanilla .component.menu .list[depth = "1"] {
+    flex: 1;
+    flex-direction: row; 
+}
+
+.vanilla .menu.horizontal   > .list                         { flex-direction: row; }
+.vanilla .menu.vertical     > .list                         { flex-direction: column; }
+
+.vanilla .menu              > .list > .item                 {
+
+    position:           relative; 
+    flex-direction:     row; 
+}
+
+.vanilla .menu              > .list > .item > .button       { 
+
+    flex:               1;
+    border-color:       transparent;
+    border:             var(--vanilla_Border-Default);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+}
+
+
+
+
+/* submenu */
+
+.vanilla .menu.sub                                          { 
+
+    top:                100%;
+    left:               0;
+    display:            none;
+    position:           absolute; 
+    width:              fit-content;
+    height:             fit-content;
+    z-index:            var(--vanilla_ZIndex-Actived);
+    padding:            var(--vanilla_Spacing-4);
+    border:             var(--vanilla_Border-Default);
+    border-color:       var(--vanilla_Color-Border);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+    background-color:   var(--vanilla_Color-Background);
+}
+
+.vanilla .menu.horizontal   .menu.sub                       { 
+
+    top:                100%;
+    left:               0;
+}
+
+.vanilla .menu.vertical     .menu.sub                       { 
+
+    top:                calc(var(--vanilla_Spacing-4) * -1);
+    left:               calc(100% + var(--vanilla_Spacing-4));
+}
+
+.vanilla .menu.sub          > .list                         { 
+
+    width:      fit-content;
+    height:     fit-content;
+}
+
+.vanilla .menu.sub          > .list > .item                 { 
+
+}
+
+.vanilla .menu.sub          > .list > .item > .button       {
+
+    flex-direction:     row;
+    align-items:        center;
+    justify-content:    flex-start;
+    border-radius:      none;
+    border-color:       transparent;
+    border:             0;
+    border-radius:       0;
+    border-bottom:      var(--vanilla_Border-Default);
+}
+
+
+/* events */
+
+.vanilla .menu              > .list > .item > .button:hover     { border-color: var(--vanilla_Color-Border); }
+.vanilla .menu              > .list > .item > .button.actived   { border-color: var(--vanilla_Color-Actived); }
+
+.vanilla .menu.sub          > .list > .item > .button:hover     { border-color: var(--vanilla_Color-Border); }
+.vanilla .menu.sub          > .list > .item > .button.actived   { border-color: var(--vanilla_Color-Actived); }
+
+.vanilla .menu              > .list > .item > .button.actived ~ .menu.sub { display: flex;}
+
+/* .vanilla .menu       {
+    padding:            2px;
+    z-index:            10;
+}
+
+.vanilla .menu > .overlay       {
+
+    position:           fixed;
+    top:                0;
+    left:               0;
+    right:              0;
+    bottom:             0;
+    display:            none;
+    z-index:            var(--vanilla_ZIndex-Hidden);
+    background-color:   var(--vanilla_Color-Overlay);
+}
+
+.vanilla .menu .list        { z-index: var(--vanilla_ZIndex-Default); }
+
+.vanilla .menu .list > .item        { 
+
+    position:           relative; 
+    flex-direction:     row; 
+}
+
+.vanilla .menu .list > .item > .field       {
+
+    flex:               1;
+    flex-direction:     row;
+    align-items:        center;
+    justify-content:    center;
+    white-space:        nowrap;
+    text-decoration:    none;
+    cursor:             pointer;
+    z-index:            var(--vanilla_ZIndex-Default);
+    border:             var(--vanilla_Border-Default);
+    border-radius:      var(--vanilla_BorderRadius-Default);
+    padding:            var(--vanilla_Spacing-2) var(--vanilla_Spacing-4);
+}
+
+.vanilla .menu .list > .item > .switch > .status        { display: none; }
+
+.vanilla .menu .list[data-depth = "0"]      { flex-direction: row; }
+
+.vanilla .menu .list[data-depth = "1"]      {
 
     position:           absolute;
     top:                100%;
     left:               0;
     z-index:            10;
     display:            none;
-    margin:             0;
     width:              fit-content;
     height:             fit-content;
     padding:            var(--vanilla_Spacing-4);
@@ -16,35 +147,19 @@
     background-color:   var(--vanilla_Color-Background);
 }
 
-.vanilla .component.menu .list[depth = "0"] > .item   { 
-    
-    position: relative; 
-    padding: 0;
-}
-
-.vanilla .component.menu .list[depth = "1"] > .item   { padding: 0; }
-
-.vanilla .component.menu .list > .item > button.field { padding: var(--vanilla_Spacing-1) var(--vanilla_Spacing-3); }
-
-.vanilla .component.menu .list[depth = "1"] > .item > .field {
+.vanilla .menu .list[data-depth = "1"] > .item > .field         {
 
     border:             0;
     border-radius:      0;
     justify-content:    flex-start;
     border-bottom:      var(--vanilla_Border-Default);
-}
-
-.vanilla .component.menu.horizontal .list { flex-direction: row; }
-.vanilla .component.menu.vertical   .list { flex-direction: column; }
-.vanilla .component.menu.wrap       .list { flex-wrap: wrap; }
-.vanilla .component.menu.nowrap     .list { flex-wrap: nowrap; }
+} */
 
 /* toggle */
-.vanilla .component.menu:has(.list[depth = "0"] > .item > .field.actived) > .overlay     { display: flex; z-index: var(--vanilla_ZIndex-Overlay); }
-.vanilla .component.menu .list > .item > .field:hover                                         { border-color: var(--vanilla_Color-Hover); }
-.vanilla .component.menu .list:has(> .item > .field.actived)                                  { z-index: var(--vanilla_ZIndex-Actived); }
-.vanilla .component.menu .list > .item > .field.actived                                       { border-color: var(--vanilla_Color-Actived); z-index: var(--vanilla_ZIndex-Actived); }
-.vanilla .component.menu .list > .item > .field.actived ~ .list                               { display: flex; z-index: var(--vanilla_ZIndex-Actived); }
-
+.vanilla .menu:has(.list[data-depth = "0"] > .item > .field.actived) > .overlay             { display: flex; z-index: var(--vanilla_ZIndex-Overlay); }
+.vanilla .menu .list > .item > .field:hover                                                 { border-color: var(--vanilla_Color-Hover); }
+.vanilla .menu .list:has(> .item > .field.actived)                                          { z-index: var(--vanilla_ZIndex-Actived); }
+.vanilla .menu .list > .item > .field.actived                                               { border-color: var(--vanilla_Color-Actived); z-index: var(--vanilla_ZIndex-Actived); }
+.vanilla .menu .list > .item > .field.actived ~ .list                                       { display: flex; z-index: var(--vanilla_ZIndex-Actived); }
 
 

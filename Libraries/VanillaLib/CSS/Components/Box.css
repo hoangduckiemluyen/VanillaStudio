@@ -1,35 +1,36 @@
 /* --- General -------------------------------------------------------------- */
-.vanilla .box { display: flex; }
+.vanilla .box                                   {}
 
-.vanilla .horizontal-items                  { flex-direction: row; }
-.vanilla .vertical-items                    { flex-direction: column; }
+.vanilla .box.horizontal > .list                { flex-direction: row; }
+.vanilla .box.vertical > .list                  { flex-direction: column; }
 
-.vanilla .horizontal-items.x-start          { justify-content: start;}
-.vanilla .horizontal-items.x-center         { justify-content: center;}
-.vanilla .horizontal-items.x-end            { justify-content: end;}
-.vanilla .horizontal-items.x-stretch > *    { flex: 1;} /* loi bi keo dai content*/
-.vanilla .horizontal-items.y-start          { align-items: start;}
-.vanilla .horizontal-items.y-center         { align-items: center;}
-.vanilla .horizontal-items.y-end            { align-items: end;}
-.vanilla .horizontal-items.y-stretch        { align-items: stretch;}
+.vanilla .box.horizontal.x-start    > .list     { justify-content: start;}
+.vanilla .box.horizontal.x-center   > .list     { justify-content: center;}
+.vanilla .box.horizontal.x-end      > .list     { justify-content: end;}
+.vanilla .box.horizontal.x-stretch  > .list > * { flex: 1;} /* loi bi keo dai content*/
+.vanilla .box.horizontal.y-start    > .list     { align-items: start;}
+.vanilla .box.horizontal.y-center   > .list     { align-items: center;}
+.vanilla .box.horizontal.y-end      > .list     { align-items: end;}
+.vanilla .box.horizontal.y-stretch  > .list     { align-items: stretch;}
 
-.vanilla .vertical-items.x-start            { align-items: start;}
-.vanilla .vertical-items.x-center           { align-items: center;}
-.vanilla .vertical-items.x-end              { align-items: end;}
-.vanilla .vertical-items.x-stretch          { align-items: stretch;}
-.vanilla .vertical-items.y-start            { justify-content: start;}
-.vanilla .vertical-items.y-center           { justify-content: center;}
-.vanilla .vertical-items.y-end              { justify-content: end;}
-.vanilla .vertical-items.y-stretch > *      { width: 100%;}
+.vanilla .box.vertical.x-start      > .list     { align-items: start;}
+.vanilla .box.vertical.x-center     > .list     { align-items: center;}
+.vanilla .box.vertical.x-end        > .list     { align-items: end;}
+.vanilla .box.vertical.x-stretch    > .list     { align-items: stretch;}
+.vanilla .box.vertical.y-start      > .list     { justify-content: start;}
+.vanilla .box.vertical.y-center     > .list     { justify-content: center;}
+.vanilla .box.vertical.y-end        > .list     { justify-content: end;}
+.vanilla .box.vertical.y-stretch    > .list > * { width: 100%;}
 
 /* --- Inner Items ---------------------------------------------------------- */
-.vanilla .horizontal-items > .full-width        { flex: 1; }
-.vanilla .horizontal-items > .full-height        { align-self: stretch; }
-.vanilla .vertical-items > .full-width        { align-self: stretch; }
-.vanilla .vertical-items > .full-height        { flex: 1; }
+.vanilla .box.horizontal > .full-width  { flex: 1; }
+.vanilla .box.horizontal > .full-height { align-self: stretch; }
+.vanilla .box.vertical > .full-width    { align-self: stretch; }
+.vanilla .box.vertical > .full-height   { flex: 1; }
 
 /* --- Grid ----------------------------------------------------------------- */
 .vanilla .wide {
+
     width:      120rem;
     max-width:  100%;
     margin:     0 auto;
