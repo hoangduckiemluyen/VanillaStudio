@@ -1,5 +1,5 @@
 /* --- General -------------------------------------------------------------- */
-.vanilla .container                                                     { display: flex; }
+.vanilla .container                                                     { flex-wrap: nowrap; overflow: hidden;  }
 .vanilla .container.fill                                                { flex: 1 }
 
 .vanilla .container                         > .list                     { flex: 1; }
