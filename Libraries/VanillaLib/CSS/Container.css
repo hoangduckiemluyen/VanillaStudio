@@ -1,0 +1,62 @@
+/* --- General -------------------------------------------------------------- */
+.vanilla .container                                                     { display: flex; }
+.vanilla .container.fill                                                { flex: 1 }
+
+.vanilla .container                         > .list                     { flex: 1; }
+.vanilla .container.scroll                  > .list                     { overflow: scroll; }
+.vanilla .container.wrap                    > .list                     { flex-wrap: wrap; overflow: scroll; }
+.vanilla .container.wrap                    > .list                     { flex-wrap: wrap; }
+.vanilla .container.horizontal              > .list                     { flex-direction: row; }
+.vanilla .container.vertical                > .list                     { flex-direction: column; }
+
+.vanilla .container.horizontal.x-start      > .list                     { justify-content: start;}
+.vanilla .container.horizontal.x-center     > .list                     { justify-content: center;}
+.vanilla .container.horizontal.x-end        > .list                     { justify-content: end;}
+.vanilla .container.horizontal.x-stretch    > .list > *                 { flex: 1;} /* loi bi keo dai content*/
+.vanilla .container.horizontal.y-start      > .list                     { align-items: start;}
+.vanilla .container.horizontal.y-center     > .list                     { align-items: center;}
+.vanilla .container.horizontal.y-end        > .list                     { align-items: end;}
+.vanilla .container.horizontal.y-stretch    > .list                     { align-items: stretch;}
+
+.vanilla .container.vertical.x-start        > .list                     { align-items: start;}
+.vanilla .container.vertical.x-center       > .list                     { align-items: center;}
+.vanilla .container.vertical.x-end          > .list                     { align-items: end;}
+.vanilla .container.vertical.x-stretch      > .list                     { align-items: stretch;}
+.vanilla .container.vertical.y-start        > .list                     { justify-content: start;}
+.vanilla .container.vertical.y-center       > .list                     { justify-content: center;}
+.vanilla .container.vertical.y-end          > .list                     { justify-content: end;}
+.vanilla .container.vertical.y-stretch      > .list > *                 { width: 100%;}
+
+/* --- Inner fill ---------------------------------------------------------- */
+.vanilla .container                         > .list > .item.fill { flex: 1; }
+.vanilla .container.horizontal              > .list > .item.fill { align-self: stretch; }
+.vanilla .container.vertical                > .list > .item.fill { flex: 1; }
+
+/* --- Gutter ---------------------------------------------------------- */
+.vanilla .container                                                     { --vanilla_Size-Gutter: 0px }
+.vanilla .container.gutter-1                                            { --vanilla_Size-Gutter: var(--vanilla_Size-1); }
+.vanilla .container.gutter-2                                            { --vanilla_Size-Gutter: var(--vanilla_Size-2); }
+.vanilla .container.gutter-3                                            { --vanilla_Size-Gutter: var(--vanilla_Size-3); }
+.vanilla .container.gutter-4                                            { --vanilla_Size-Gutter: var(--vanilla_Size-4); }
+.vanilla .container.gutter-5                                            { --vanilla_Size-Gutter: var(--vanilla_Size-5); }
+.vanilla .container.gutter-6                                            { --vanilla_Size-Gutter: var(--vanilla_Size-6); }
+
+.vanilla .container                         > .list                     { margin: calc(var(--vanilla_Size-Gutter) / -2); }
+.vanilla .container                         > .list > .item             { padding: calc(var(--vanilla_Size-Gutter) / 2); }
+
+/* --- Other ----------------------------------------------------------------- */
+
+.vanilla .container.padding-1 { padding: var(--vanilla_Size-1); }
+.vanilla .container.padding-2 { padding: var(--vanilla_Size-2); }
+.vanilla .container.padding-3 { padding: var(--vanilla_Size-3); }
+.vanilla .container.padding-4 { padding: var(--vanilla_Size-4); }
+.vanilla .container.padding-5 { padding: var(--vanilla_Size-5); }
+.vanilla .container.padding-6 { padding: var(--vanilla_Size-6); }
+
+.vanilla .container.border { 
+
+    border: var(--vanilla_Border-Default);
+    border-color: var(--vanilla_Color-Border);
+}
+
+.vanilla .container.radius { border-radius:  var(--vanilla_BorderRadius-Default); }

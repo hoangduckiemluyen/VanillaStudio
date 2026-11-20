@@ -4,7 +4,9 @@
     align-items:        center;
     justify-content:    center;
     white-space:        nowrap;
+    outline:            none;
     padding:            var(--vanilla_Spacing-2) var(--vanilla_Spacing-4);
+    border-radius:      var(--vanilla_BorderRadius-Default)  ;
 }
 
 /* --- Button - Color ------------------------------------------------------- */
@@ -24,10 +26,12 @@
 
 .vanilla .button.normal {
 
-    text-shadow:                    none;
-    --vanilla_ButtonText:           var(--vanilla_ButtonText-Normal);
-    --vanilla_ButtonBorderColor:    var(--vanilla_ButtonBorderColor-Normal);
-    --vanilla_ButtonBackground:     var(--vanilla_ButtonBackground-Normal);
+    border:         var(--vanilla_Border-Default);
+    border-color:   var(--vanilla_Color-Border);
+}
+
+.vanilla .button.normal:hover {
+    border-color: var(--vanilla_Color-Hover);
 }
 
 .vanilla .button.alert {
