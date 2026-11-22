@@ -1,6 +1,7 @@
 @import url("./CSS/Declarations.css");
 @import url("./CSS/Base.css");
 @import url("./CSS/Container.css");
+@import url("./CSS/Component.css");
 
 @import url("./CSS/Components/Avatar.css");
 @import url("./CSS/Components/Form.css");

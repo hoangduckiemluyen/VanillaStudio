@@ -13,17 +13,6 @@
     flex-direction:     row; 
 }
 
-.vanilla .menu              > .list > .item > .button       { 
-
-    flex:               1;
-    border-color:       transparent;
-    border:             var(--vanilla_Border-Default);
-    border-radius:      var(--vanilla_BorderRadius-Default);
-}
-
-
-
-
 /* submenu */
 
 .vanilla .menu.sub                                          { 
@@ -35,7 +24,7 @@
     width:              fit-content;
     height:             fit-content;
     z-index:            var(--vanilla_ZIndex-Actived);
-    padding:            var(--vanilla_Spacing-4);
+    padding:            var(--vanilla_Size-4);
     border:             var(--vanilla_Border-Default);
     border-color:       var(--vanilla_Color-Border);
     border-radius:      var(--vanilla_BorderRadius-Default);
@@ -50,8 +39,8 @@
 
 .vanilla .menu.vertical     .menu.sub                       { 
 
-    top:                calc(var(--vanilla_Spacing-4) * -1);
-    left:               calc(100% + var(--vanilla_Spacing-4));
+    top:                calc(var(--vanilla_Size-4) * -1);
+    left:               calc(var(--vanilla_Size-4) + 100% );
 }
 
 .vanilla .menu.sub          > .list                         { 
@@ -64,13 +53,10 @@
 
 }
 
-.vanilla .menu.sub          > .list > .item > .button       {
+.vanilla .menu.sub          > .list > .item > .field       {
 
-    flex-direction:     row;
-    align-items:        center;
     justify-content:    flex-start;
     border-radius:      none;
-    border-color:       transparent;
     border:             0;
     border-radius:       0;
     border-bottom:      var(--vanilla_Border-Default);
@@ -79,13 +65,8 @@
 
 /* events */
 
-.vanilla .menu              > .list > .item > .button:hover     { border-color: var(--vanilla_Color-Border); }
-.vanilla .menu              > .list > .item > .button.actived   { border-color: var(--vanilla_Color-Actived); }
 
-.vanilla .menu.sub          > .list > .item > .button:hover     { border-color: var(--vanilla_Color-Border); }
-.vanilla .menu.sub          > .list > .item > .button.actived   { border-color: var(--vanilla_Color-Actived); }
-
-.vanilla .menu              > .list > .item > .button.actived ~ .menu.sub { display: flex;}
+.vanilla .menu              > .list > .item > .field.actived ~ .menu.sub { display: flex;}
 
 /* .vanilla .menu       {
     padding:            2px;
@@ -156,7 +137,7 @@
 } */
 
 /* toggle */
-.vanilla .menu:has(.list[data-depth = "0"] > .item > .field.actived) > .overlay             { display: flex; z-index: var(--vanilla_ZIndex-Overlay); }
+.vanilla .menu:has(> .list > .item > .field.actived) > .overlay             { display: flex; z-index: var(--vanilla_ZIndex-Overlay); }
 .vanilla .menu .list > .item > .field:hover                                                 { border-color: var(--vanilla_Color-Hover); }
 .vanilla .menu .list:has(> .item > .field.actived)                                          { z-index: var(--vanilla_ZIndex-Actived); }
 .vanilla .menu .list > .item > .field.actived                                               { border-color: var(--vanilla_Color-Actived); z-index: var(--vanilla_ZIndex-Actived); }

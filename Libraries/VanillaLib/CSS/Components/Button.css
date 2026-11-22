@@ -7,6 +7,8 @@
     outline:            none;
     padding:            var(--vanilla_Spacing-2) var(--vanilla_Spacing-4);
     border-radius:      var(--vanilla_BorderRadius-Default)  ;
+    min-width: 0;
+    min-height: 0;
 }
 
 /* --- Button - Color ------------------------------------------------------- */

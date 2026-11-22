@@ -12,7 +12,7 @@
     background-color:   var(--vanilla_Color-Overlay);
 }
 
-.vanilla .select > .field { 
+.vanilla .select > .button { 
     background-color:   var(--vanilla_Color-Background); 
     z-index:            var(--vanilla_ZIndex-Default);
 }
@@ -45,7 +45,7 @@
 
 .vanilla .select > .dropdown > .list > .item { flex-shrink: 0;}
 
-.vanilla .select .field {
+.vanilla .select .button {
 
     align-items:        flex-start;
     cursor:             pointer;
@@ -54,7 +54,7 @@
     flex-shrink:        0;
 }
 
-.vanilla .select > .field {
+.vanilla .select > .button {
     border:             var(--vanilla_Border-Default);
     border-color:       var(--vanilla_Color-Border);
     border-radius:      var(--vanilla_BorderRadius-Default);
@@ -64,8 +64,8 @@
 /* option classes */
 
 .vanilla .select > .dropdown.actived                    { display: flex; }
-.vanilla .select .field:hover                           { border-bottom-color: var(--vanilla_Color-Hover); }
-.vanilla .select > .field:hover                         { border-color: var(--vanilla_Color-Hover); }
-.vanilla .select > .field.actived                       { border-color: var(--vanilla_Color-Actived); z-index: var(--vanilla_ZIndex-Actived); }
-.vanilla .select > .field.actived ~ .dropdown           { display: flex; z-index: var(--vanilla_ZIndex-Actived); }
-.vanilla .select:has(> .field.actived) > .overlay       { display: flex; z-index: var(--vanilla_ZIndex-Overlay);}
+.vanilla .select .button:hover                           { border-bottom-color: var(--vanilla_Color-Hover); }
+.vanilla .select > .button:hover                         { border-color: var(--vanilla_Color-Hover); }
+.vanilla .select > .button.actived                       { border-color: var(--vanilla_Color-Actived); z-index: var(--vanilla_ZIndex-Actived); }
+.vanilla .select > .button.actived ~ .dropdown           { display: flex; z-index: var(--vanilla_ZIndex-Actived); }
+.vanilla .select:has(> .button.actived) > .overlay       { display: flex; z-index: var(--vanilla_ZIndex-Overlay);}

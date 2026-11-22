@@ -1,88 +1,95 @@
 /* --- General -------------------------------------------------------------- */
-.vanilla .container                                                                     { flex-wrap: nowrap; overflow: hidden; }
+.vanilla .container                                                                     { flex-wrap: nowrap; }
 
-/* --- general -------------------------------------------------------------- */
-.vanilla .container                                                                     { flex: 1; }
-.vanilla .container:has(> .wrapper).horizontal                                          { flex-direction: row; }
-.vanilla .container:has(> .wrapper).vertical                                            { flex-direction: column; }
+/* --- General -------------------------------------------------------------- */
+.vanilla .container.horizontal                                                          { flex-direction: row; }
+.vanilla .container.vertical                                                            { flex-direction: column; }
 
-.vanilla .container:has(> .wrapper).horizontal.x-start                                  { justify-content: start;}
-.vanilla .container:has(> .wrapper).horizontal.x-center                                 { justify-content: center;}
-.vanilla .container:has(> .wrapper).horizontal.x-end                                    { justify-content: end;}
-.vanilla .container:has(> .wrapper).horizontal.x-stretch    > *                         { flex: 1;} /* loi bi keo dai content*/
-.vanilla .container:has(> .wrapper).horizontal.y-start                                  { align-items: start;}
-.vanilla .container:has(> .wrapper).horizontal.y-center                                 { align-items: center;}
-.vanilla .container:has(> .wrapper).horizontal.y-end                                    { align-items: end;}
-.vanilla .container:has(> .wrapper).horizontal.y-stretch                                { align-items: stretch;}
+.vanilla .container.horizontal.x-start                                                  { justify-content: start;}
+.vanilla .container.horizontal.x-center                                                 { justify-content: center;}
+.vanilla .container.horizontal.x-end                                                    { justify-content: end;}
+.vanilla .container.horizontal.x-stretch                    > *                         { flex: 1;} /* loi bi keo dai content*/
+.vanilla .container.horizontal.y-start                                                  { align-items: start;}
+.vanilla .container.horizontal.y-center                                                 { align-items: center;}
+.vanilla .container.horizontal.y-end                                                    { align-items: end;}
+.vanilla .container.horizontal.y-stretch                                                { align-items: stretch;}
 
-.vanilla .container:has(> .wrapper).vertical.x-start                                    { align-items: start;}
-.vanilla .container:has(> .wrapper).vertical.x-center                                   { align-items: center;}
-.vanilla .container:has(> .wrapper).vertical.x-end                                      { align-items: end;}
-.vanilla .container:has(> .wrapper).vertical.x-stretch                                  { align-items: stretch;}
-.vanilla .container:has(> .wrapper).vertical.y-start                                    { justify-content: start;}
-.vanilla .container:has(> .wrapper).vertical.y-center                                   { justify-content: center;}
-.vanilla .container:has(> .wrapper).vertical.y-end                                      { justify-content: end;}
-.vanilla .container:has(> .wrapper).vertical.y-stretch      > *                         { width: 100%;}
+.vanilla .container.vertical.x-start                                                    { align-items: start;}
+.vanilla .container.vertical.x-center                                                   { align-items: center;}
+.vanilla .container.vertical.x-end                                                      { align-items: end;}
+.vanilla .container.vertical.x-stretch                                                  { align-items: stretch;}
+.vanilla .container.vertical.y-start                                                    { justify-content: start;}
+.vanilla .container.vertical.y-center                                                   { justify-content: center;}
+.vanilla .container.vertical.y-end                                                      { justify-content: end;}
+.vanilla .container.vertical.y-stretch                      > *                         { width: 100%;}
 
 /* --- List -------------------------------------------------------------- */
-.vanilla .container:has(> .list)                            > .list                     { flex: 1; }
-.vanilla .container:has(> .list).scroll                     > .list                     { overflow: scroll; }
-.vanilla .container:has(> .list).wrap                       > .list                     { flex-wrap: wrap; overflow: scroll; }
-.vanilla .container:has(> .list).horizontal                 > .list                     { flex-direction: row; }
-.vanilla .container:has(> .list).vertical                   > .list                     { flex-direction: column; }
+.vanilla .container:has(> .list)                            > .list                         { flex: 1; }
+.vanilla .container:has(> .list).wrap                       > .list                         { flex-wrap: wrap; }
+.vanilla .container:has(> .list).horizontal                 > .list                         { flex-direction: row; }
+.vanilla .container:has(> .list).vertical                   > .list                         { flex-direction: column; }
 
-.vanilla .container:has(> .list).horizontal.x-start         > .list                     { justify-content: start;}
-.vanilla .container:has(> .list).horizontal.x-center        > .list                     { justify-content: center;}
-.vanilla .container:has(> .list).horizontal.x-end           > .list                     { justify-content: end;}
-.vanilla .container:has(> .list).horizontal.x-stretch       > .list     > .item         { flex: 1;} /* loi bi keo dai content*/
-.vanilla .container:has(> .list).horizontal.y-start         > .list                     { align-items: start;}
-.vanilla .container:has(> .list).horizontal.y-center        > .list                     { align-items: center;}
-.vanilla .container:has(> .list).horizontal.y-end           > .list                     { align-items: end;}
-.vanilla .container:has(> .list).horizontal.y-stretch       > .list                     { align-items: stretch;}
+.vanilla .container:has(> .list).horizontal.x-start         > .list                         { justify-content: start;}
+.vanilla .container:has(> .list).horizontal.x-center        > .list                         { justify-content: center;}
+.vanilla .container:has(> .list).horizontal.x-end           > .list                         { justify-content: end;}
+.vanilla .container:has(> .list).horizontal.x-stretch       > .list         > .item         { flex: 1;} /* loi bi keo dai content*/
+.vanilla .container:has(> .list).horizontal.y-start         > .list                         { align-items: start;}
+.vanilla .container:has(> .list).horizontal.y-center        > .list                         { align-items: center;}
+.vanilla .container:has(> .list).horizontal.y-end           > .list                         { align-items: end;}
+.vanilla .container:has(> .list).horizontal.y-stretch       > .list                         { align-items: stretch;}
 
-.vanilla .container:has(> .list).vertical.x-start           > .list                     { align-items: start;}
-.vanilla .container:has(> .list).vertical.x-center          > .list                     { align-items: center;}
-.vanilla .container:has(> .list).vertical.x-end             > .list                     { align-items: end;}
-.vanilla .container:has(> .list).vertical.x-stretch         > .list                     { align-items: stretch;}
-.vanilla .container:has(> .list).vertical.y-start           > .list                     { justify-content: start;}
-.vanilla .container:has(> .list).vertical.y-center          > .list                     { justify-content: center;}
-.vanilla .container:has(> .list).vertical.y-end             > .list                     { justify-content: end;}
-.vanilla .container:has(> .list).vertical.y-stretch         > .list     > .item         { width: 100%;}
+.vanilla .container:has(> .list).vertical.x-start           > .list                         { align-items: start;}
+.vanilla .container:has(> .list).vertical.x-center          > .list                         { align-items: center;}
+.vanilla .container:has(> .list).vertical.x-end             > .list                         { align-items: end;}
+.vanilla .container:has(> .list).vertical.x-stretch         > .list                         { align-items: stretch;}
+.vanilla .container:has(> .list).vertical.y-start           > .list                         { justify-content: start;}
+.vanilla .container:has(> .list).vertical.y-center          > .list                         { justify-content: center;}
+.vanilla .container:has(> .list).vertical.y-end             > .list                         { justify-content: end;}
+.vanilla .container:has(> .list).vertical.y-stretch         > .list         > .item         { width: 100%;}
+
+/* --- Scroll ---------------------------------------------------------- */
+.vanilla .container:has(> .list)                                                            { overflow: visible; }
+.vanilla .container                                         > .list                         { overflow: hidden; }
+.vanilla .container:has(> .list).horizontal.wrap.scroll     > .list                         { overflow-y: auto; }
+.vanilla .container:has(> .list).vertical.wrap.scroll       > .list                         { overflow-x: auto; }
+.vanilla .container:has(> .list).horizontal.scroll          > .list                         { overflow-x: auto; }
+.vanilla .container:has(> .list).vertical.scroll            > .list                         { overflow-y: auto; }
+.vanilla .container:has(> .list)                            > .list  > .item                {flex-shrink: 0;}
 
 /* --- Fill ---------------------------------------------------------- */
-.vanilla .container.fill                                                                { flex: 1 }
-.vanilla .container:has(> .list)                            > .list     > .item.fill    { flex: 1; }
-.vanilla .container:has(> .list).horizontal                 > .list     > .item.fill    { align-self: stretch; }
-.vanilla .container:has(> .list).vertical                   > .list     > .item.fill    { flex: 1; }
-.vanilla .container:has(> .wrapper)                         > .wrapper.fill             { flex: 1 }
+.vanilla .container.fill                                                                    { flex: 1 }
+.vanilla .container:has(> .list)                            > .list         > .item.fill    { flex: 1; }
+.vanilla .container:has(> .list).horizontal                 > .list         > .item.fill    { align-self: stretch; }
+.vanilla .container:has(> .list).vertical                   > .list         > .item.fill    { flex: 1; }
+.vanilla .container:has(> .wrapper)                         > .wrapper.fill                 { flex: 1; }
 
 /* --- Gutter ---------------------------------------------------------- */
-.vanilla .container                                                                     { --vanilla_Size-Gutter: 0px }
-.vanilla .container.gutter-1                                                            { --vanilla_Size-Gutter: var(--vanilla_Size-1); }
-.vanilla .container.gutter-2                                                            { --vanilla_Size-Gutter: var(--vanilla_Size-2); }
-.vanilla .container.gutter-3                                                            { --vanilla_Size-Gutter: var(--vanilla_Size-3); }
-.vanilla .container.gutter-4                                                            { --vanilla_Size-Gutter: var(--vanilla_Size-4); }
-.vanilla .container.gutter-5                                                            { --vanilla_Size-Gutter: var(--vanilla_Size-5); }
-.vanilla .container.gutter-6                                                            { --vanilla_Size-Gutter: var(--vanilla_Size-6); }
+.vanilla .container                                                                         { --vanilla_Size-Gutter: 0px }
+.vanilla .container.gutter-1                                                                { --vanilla_Size-Gutter: var(--vanilla_Size-1); }
+.vanilla .container.gutter-2                                                                { --vanilla_Size-Gutter: var(--vanilla_Size-2); }
+.vanilla .container.gutter-3                                                                { --vanilla_Size-Gutter: var(--vanilla_Size-3); }
+.vanilla .container.gutter-4                                                                { --vanilla_Size-Gutter: var(--vanilla_Size-4); }
+.vanilla .container.gutter-5                                                                { --vanilla_Size-Gutter: var(--vanilla_Size-5); }
+.vanilla .container.gutter-6                                                                { --vanilla_Size-Gutter: var(--vanilla_Size-6); }
 
 /* no list */
-.vanilla .container:has(> .wrapper)                                                     { margin: calc(var(--vanilla_Size-Gutter) / -2); }
-.vanilla .container:has(> .wrapper)                         > .wrapper                  { padding: calc(var(--vanilla_Size-Gutter) / 2); }
-.vanilla .container:has(> .wrapper)                         > .list                     { display: none; }
+.vanilla .container:has(> .wrapper)                                                         { margin: calc(var(--vanilla_Size-Gutter) / -2); }
+.vanilla .container:has(> .wrapper)                         > .wrapper                      { padding: calc(var(--vanilla_Size-Gutter) / 2); }
+.vanilla .container:has(> .wrapper)                         > .list                         { display: none; }
 
 /* no wrapper */
-.vanilla .container:has(> .list)                            > .list                     { margin: calc(var(--vanilla_Size-Gutter) / -2); }
-.vanilla .container:has(> .list)                            > .list > .item             { padding: calc(var(--vanilla_Size-Gutter) / 2); }
-.vanilla .container:has(> .list)                            > .wrapper                  { display: none; }
+.vanilla .container:has(> .list)                            > .list                         { margin: calc(var(--vanilla_Size-Gutter) / -2); }
+.vanilla .container:has(> .list)                            > .list         > .item         { padding: calc(var(--vanilla_Size-Gutter) / 2); }
+.vanilla .container:has(> .list)                            > .wrapper                      { display: none; }
 
 /* --- Other ----------------------------------------------------------------- */
 
-.vanilla .container.padding-1                                                           { padding: var(--vanilla_Size-1); }
-.vanilla .container.padding-2                                                           { padding: var(--vanilla_Size-2); }
-.vanilla .container.padding-3                                                           { padding: var(--vanilla_Size-3); }
-.vanilla .container.padding-4                                                           { padding: var(--vanilla_Size-4); }
-.vanilla .container.padding-5                                                           { padding: var(--vanilla_Size-5); }
-.vanilla .container.padding-6                                                           { padding: var(--vanilla_Size-6); }
+.vanilla .container.padding-1                                                               { padding: var(--vanilla_Size-1); }
+.vanilla .container.padding-2                                                               { padding: var(--vanilla_Size-2); }
+.vanilla .container.padding-3                                                               { padding: var(--vanilla_Size-3); }
+.vanilla .container.padding-4                                                               { padding: var(--vanilla_Size-4); }
+.vanilla .container.padding-5                                                               { padding: var(--vanilla_Size-5); }
+.vanilla .container.padding-6                                                               { padding: var(--vanilla_Size-6); }
 
 .vanilla .container.border { 
 
