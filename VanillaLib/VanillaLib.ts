@@ -1,3 +1,3 @@
-import {VanillaComponents} from "./TS/VanillaComponents"
+import {VanillaComponents} from "./Scripts/VanillaComponents"
 
 export const VanillaLib = VanillaComponents;

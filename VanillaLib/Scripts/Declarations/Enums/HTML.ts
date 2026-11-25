@@ -68,13 +68,3 @@ export enum Selector {
     SCOPE           = ":scope",
 }
 
-export enum Tag {
-    DIV             = "div",
-    INPUT           = "input",
-    A               = "a",
-    FORM            = "form",
-    P               = "p",
-    UL              = "ul",
-    LI              = "li",
-    BUTTON          = "button"
-}

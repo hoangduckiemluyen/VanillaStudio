@@ -21,7 +21,7 @@
                 <div class="container horizontal border radius" id="__header__">
 
                     <!-- Begin: Header - Menu -------------------------------------------------------------------------------------- -->
-                    <div class="component menu horizontal">
+                    <div class="component menu horizontal" id="__menu__">
                         <div class="overlay"></div>
                         <ul class="list">
                             <li class="item">
@@ -273,21 +273,68 @@
                                                     <div class="body">
                                                         <div class="content">
                                                             <div class="block"><p class="title">container</p>
-                                                                <div class="block"><p class="title">sub container ssssssssssssssssssssssssssssssssss</p>
-                                                                    <div class="block"><p class="title">item 1</p></div>
-                                                                    <div class="block"><p class="title">item 2</p></div>
-                                                                    <div class="block"><p class="title">item 3</p></div>
-                                                                </div>
-                                                                <div class="block"><p class="title">sub container ssssssssssssssssssssssssssssssssss</p>
-                                                                    <div class="block"><p class="title">item 1</p></div>
-                                                                    <div class="block"><p class="title">item 2</p></div>
-                                                                    <div class="block"><p class="title">item 3</p></div>
-                                                                </div>
-                                                                <div class="block"><p class="title">sub container ssssssssssssssssssssssssssssssssss</p>
-                                                                    <div class="block"><p class="title">item 1</p></div>
-                                                                    <div class="block"><p class="title">item 2</p></div>
-                                                                    <div class="block"><p class="title">item 3</p></div>
-                                                                </div>
+                                                                <canvas id="myCanvas" width="600" height="400"></canvas>
+
+  <script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // 1. Nền trời chuyển sắc (Linear Gradient)
+    const skyGrad = ctx.createLinearGradient(0, 0, 0, 300);
+    skyGrad.addColorStop(0, "#4facfe");
+    skyGrad.addColorStop(1, "#e0f7fa");
+    ctx.fillStyle = skyGrad;
+    ctx.fillRect(0, 0, canvas.width, 300);
+
+    // 2. Mặt trời (hình tròn tô màu)
+    ctx.beginPath();
+    ctx.arc(500, 85, 40, 0, Math.PI * 2);
+    ctx.fillStyle = "#ffd54f";
+    ctx.fill();
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = "#ffb300";
+    ctx.stroke();
+
+    // 3. Mặt đất (hình chữ nhật)
+    ctx.fillStyle = "#66bb6a";
+    ctx.fillRect(0, 300, canvas.width, 100);
+
+    // 4. Đường chân trời / đường kẻ (đoạn thẳng)
+    ctx.beginPath();
+    ctx.moveTo(0, 300);
+    ctx.lineTo(canvas.width, 300);
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = "#2e7d32";
+    ctx.stroke();
+
+    // 5. Ngôi nhà (thân nhà + mái tam giác + cửa)
+    // Thân nhà
+    ctx.fillStyle = "#ffe0b2";
+    ctx.fillRect(180, 210, 140, 90);
+    ctx.strokeStyle = "#5d4037";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(180, 210, 140, 90);
+
+    // Mái nhà (path tam giác)
+    ctx.beginPath();
+    ctx.moveTo(165, 210);
+    ctx.lineTo(250, 145);
+    ctx.lineTo(335, 210);
+    ctx.closePath();
+    ctx.fillStyle = "#e53935";
+    ctx.fill();
+    ctx.stroke();
+
+    // Cửa ra vào
+    ctx.fillStyle = "#8d6e63";
+    ctx.fillRect(232, 245, 36, 55);
+    ctx.strokeRect(232, 245, 36, 55);
+
+    // 6. Văn bản
+    ctx.font = "bold 18px Arial";
+    ctx.fillStyle = "#1a237e";
+    ctx.fillText("HTML5 Canvas Demo", 20, 32);
+  </script>
                                                             </div>
                                                         </div>
                                                     </div>
