@@ -5,9 +5,7 @@ let mainMenu = document.getElementById("__menu__") as HTMLElement;
 // console.log(mainMenu)
 
 let menu = new VanillaLib.Menu(mainMenu); 
-menu.set(mainMenu)
+menu.create();
 menu.addItem("chill");
 menu.addItem("about");
 menu.defaultEvent();
-
-console.log(menu.get())

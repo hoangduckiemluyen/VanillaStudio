@@ -5,10 +5,16 @@
  * @created 2026-11-25
  */
 
-import {ComponentDepth, HTML_Class, HTML_Tag, IComponent} from "./__Include__";
+import {ComponentDepth, HTML_Class, HTML_Tag, JsonData, ComponentInterface} from "./__Include__";
 
+type ComponentType = {
+    tag         : string,
+    text        : string,
+    classes     : string [],
+    child       : object,
+}
 
-export default class Component implements IComponent {
+export default class Component implements ComponentInterface {
     
     
     public static readonly Depth =  ComponentDepth ; 
@@ -35,25 +41,47 @@ export default class Component implements IComponent {
     }
 
     public create() {
-        this.__Main.classList.add(HTML_Class.COMPONENT);
-
-        this.__List.classList.add(HTML_Class.LIST);
-        this.__Main.appendChild(this.__List);
-        this.__Container.appendChild(this.__Main);
+        let object = JSON.parse(JsonData.MENU);
+        console.log(object.tag);
     }
 
-    public set(element : HTMLElement): void {
-            this.__Main = element; 
-            let nodeList = this.__Main.querySelectorAll(':scope > .list > .item > .field') as NodeListOf<HTMLElement>;
-            nodeList.forEach((e, i) => {
-                this.__Field[i] = e;
+    public update(element : HTMLElement): void {
+            this.__Main     = element; 
+            this.__Overlay  = element.querySelector(":scope > .overlay") as HTMLElement;
+            this.__List     = element.querySelector(":scope > .list") as HTMLElement;
+            let items       = this.__Main.querySelectorAll(':scope > .list > .item') as NodeListOf<HTMLElement>;
+            let fields      = this.__Main.querySelectorAll(':scope > .list > .item > .field') as NodeListOf<HTMLElement>;
+
+            // collecting items
+            items.forEach((e, i) => {
+                this.__Item[i] = e;
             })
+
+            // collecting fields
+            fields.forEach((e, i) => {
+                this.__Field[i] = e;
+            });
             console.log(this.__Field);
         
     }
 
-    public get() : HTMLElement { return this.__Main;  }
-    
+    public read() : HTMLElement { return this.__Main;  }
+
+    public delete() : void { }
+
+    getElementByJSON (dataStruct : ComponentType) : ComponentType {
+
+        let struct : ComponentType = {
+            tag : "",
+            text: "",
+            classes : [],
+            child : [],
+        };
+
+        
+        return struct;
+    }
+
     public addClassName(elementDepth : ComponentDepth, className : string[], offset : number) : void {
         
         switch (elementDepth) {

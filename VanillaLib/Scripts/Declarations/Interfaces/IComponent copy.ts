@@ -1,3 +1,10 @@
+/**
+ * @file Component.ts
+ * @description This is Component class, using for inheritance.
+ * @author Hoang Duc Kiem Luyen
+ * @created 2026-11-25
+ */ 
+
 import { ComponentDepth } from "./__Include__"; 
 
 export interface IComponent {
