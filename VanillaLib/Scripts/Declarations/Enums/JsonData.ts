@@ -3,23 +3,35 @@ export enum JsonData {
     MENU = `
         {
             "tag" : "div", 
+            "text": "",
             "classes" : ["component", "menu"],
-            "content" : 
-            {
-                "tag" : "ul",
-                "classes" : ["list"],
-                "content" : 
+            "child" : 
+            [
                 {
-                    "tag" : "li",
-                    "classes" : ["item"],
-                    "content" :
-                    {
-                        "tag" : "button",
-                        "classes": ["field"],
-                        "text" : "field"
-                    }
+                    "tag" : "div",
+                    "text": "",
+                    "classes" : ["overlay"],
+                    "child" : [] 
+                } , {
+                    "tag" : "ul",
+                    "text": "",
+                    "classes" : ["list"],
+                    "child" : 
+                    [
+                        {
+                            "tag" : "li",
+                            "text": "",
+                            "classes" : ["item"],
+                            "child" :
+                            {
+                                "tag" : "button",
+                                "text" : "field",
+                                "classes": ["field"]
+                            }
+                        }
+                    ]
                 }
-            }
+            ]
         }
     `,
 }

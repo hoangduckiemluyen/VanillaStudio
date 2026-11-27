@@ -5,10 +5,9 @@
     "child" : 
     [
         {
-            "tag" : "ul",
+            "tag" : "div",
             "text": "",
-            "classes" : ["list"],
-            "child" : [] 
+            "classes" : ["overlay"]
 
         } , {
             "tag" : "ul",

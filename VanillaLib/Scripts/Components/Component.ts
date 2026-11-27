@@ -11,7 +11,7 @@ type ComponentType = {
     tag         : string,
     text        : string,
     classes     : string [],
-    child       : object,
+    child       : object[],
 }
 
 export default class Component implements ComponentInterface {
@@ -41,8 +41,38 @@ export default class Component implements ComponentInterface {
     }
 
     public create() {
-        let object = JSON.parse(JsonData.MENU);
-        console.log(object.tag);
+        let object = JSON.parse(JsonData.MENU) as ComponentType;
+        let rawData : ComponentType = {
+            tag         : object.tag,
+            text        : object.text,
+            classes     : object.classes as string[],
+            child       : object.child as object[],
+        }
+        let isRunning : boolean = true;
+        let data : ComponentType = {
+            tag : "",
+            text: "",
+            classes : [],
+            child : [],
+        };
+
+        this.__Main = document.createElement(rawData.tag);
+        this.__Main.textContent = rawData.text;
+        rawData.classes.forEach((e)=>{
+            this.__Main.classList.add(e);
+        });
+
+        while(isRunning) {
+            
+            let child: object[] = [];
+
+            rawData.child.forEach((e, i) => {
+                // console.log(e)
+            });
+            if(rawData.child.length) {
+                isRunning = false;
+            }
+        }
     }
 
     public update(element : HTMLElement): void {
@@ -68,19 +98,6 @@ export default class Component implements ComponentInterface {
     public read() : HTMLElement { return this.__Main;  }
 
     public delete() : void { }
-
-    getElementByJSON (dataStruct : ComponentType) : ComponentType {
-
-        let struct : ComponentType = {
-            tag : "",
-            text: "",
-            classes : [],
-            child : [],
-        };
-
-        
-        return struct;
-    }
 
     public addClassName(elementDepth : ComponentDepth, className : string[], offset : number) : void {
         
