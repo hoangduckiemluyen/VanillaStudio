@@ -71,5 +71,6 @@
 /* --- Button - Action ------------------------------------------------------ */
 .vanilla .button:hover              { opacity:   var(--vanilla_ButtonOpacityWhenHover); }
 .vanilla .button.disabled:hover     { opacity:   1; }
+.vanilla .button.normal.actived     { border-color: rebeccapurple !important; background-color: rebeccapurple; }
 
 /* dung size va flex cho button de cac content ben trong duoc cang 100% */

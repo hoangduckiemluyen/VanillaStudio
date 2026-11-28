@@ -1,1 +1,1 @@
-import * as Control from "./TS/Controls"
+import * as Control from "./Scripts/Controls"
